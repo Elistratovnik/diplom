@@ -1,0 +1,8 @@
+@import url('./__input/search-field__input.css');
+@import url('./__button/search-field__button.css');
+
+.search-field {
+  display: flex;
+  height: 64px;
+  border-radius: 32px;
+}

@@ -1,0 +1,13 @@
+.search-field__input {
+  flex-grow: 1;
+  border: none;
+  border-top-left-radius: 32px;
+  border-bottom-left-radius: 32px;
+  margin-right: -32px;
+  padding-left: 24px;
+}
+
+.search-field__input:focus {
+  outline: none;
+  box-shadow: inset 0 0 4px #3c78ed;
+}

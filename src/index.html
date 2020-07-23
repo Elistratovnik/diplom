@@ -10,11 +10,147 @@
   <link rel="icon" href="<%=require('./images/favicon.ico').default%>" type="image/x-icon">
   <link rel="stylesheet" href="<%=htmlWebpackPlugin.files.css %>">
 </head>
-<body>
-  hello
+<body class="body">
+  <div class="page body__page">
+    <section class="search">
+      <header class="header search__header">
+        <span class="header__text-logo">NewsAnalyzer</span>
+        <nav class="header__navigation">
+          <ul class="header__list">
+            <li class="header__list-item header__list-item_active"><a href="#" class="header__link">Главная</a></li>
+            <li class="header__list-item"><a href="#" class="header__link">О проекте</a></li>
+          </ul>
+        </nav>
+      </header>
+      <div class="search__container">
+        <h1 class="search__title">Что в мире творится?</h1>
+        <p class="search__description">
+          Введите в поиске любую тему и узнайте,
+          насколько популярной она была в новостях за
+          прошедшую неделю.
+        </p>
+        <div class="search-field">
+          <input type="text" class="search-field__input" placeholder="Введите тему новости">
+          <button class="button search-field__button">Искать</button>
+        </div>
+      </div>
+    </section>
+    <section class="result-container">
+      <article class="news-result">
+        <header class="news-result__header">
+          <h2 class="news-result__title">Результаты поиска</h2>
+          <a href="#" class="news-result__link">Посмотреть аналитику &GT; &rsaquo;</a>
+        </header>
+        <div class="news-result__list">
+          <div class="card news-result__card">
+            <div class="card__image"></div>
+            <span class="card__date">ДАТА</span>
+            <h3 class="card__title">some title</h3>
+            <p class="card__text">
+              В 2016 году Америка отмечала важный юбилей: сто лет назад здесь начала
+              складываться система национальных парков – охраняемых территорий, где и
+              сегодня каждый может приобщиться к природе.
+            </p>
+            <cite class="card__source">источник</cite>
+          </div>
+          <div class="card news-result__card">
+            <div class="card__image"></div>
+            <span class="card__date">ДАТА</span>
+            <h3 class="card__title">some title</h3>
+            <p class="card__text">
+              В 2016 году Америка отмечала важный юбилей: сто лет назад здесь начала
+              складываться система национальных парков – охраняемых территорий, где и
+              сегодня каждый может приобщиться к природе.
+            </p>
+            <cite class="card__source">источник</cite>
+          </div>
+          <div class="card news-result__card">
+            <div class="card__image"></div>
+            <span class="card__date">ДАТА</span>
+            <h3 class="card__title">some title</h3>
+            <p class="card__text">
+              В 2016 году Америка отмечала важный юбилей: сто лет назад здесь начала
+              складываться система национальных парков – охраняемых территорий, где и
+              сегодня каждый может приобщиться к природе.
+            </p>
+            <cite class="card__source">источник</cite>
+          </div>
+          <div class="card news-result__card">
+            <div class="card__image"></div>
+            <span class="card__date">ДАТА</span>
+            <h3 class="card__title">some title</h3>
+            <p class="card__text">
+              В 2016 году Америка отмечала важный юбилей: сто лет назад здесь начала
+              складываться система национальных парков – охраняемых территорий, где и
+              сегодня каждый может приобщиться к природе.
+            </p>
+            <cite class="card__source">источник</cite>
+          </div>
+        </div>
+        <button class="button news-result__button">Показать еще</button>
+      </article>
+    </section>
+    <section class="about-author">
+      <div class="about-author__avatar"></div>
+      <div class="about-author__description">
+        <h2 class="about-author__title">Об авторе</h2>
+        <p class="about-author__paragraph">
+          Это блок с описанием автора проекта. Здесь следует указать, как вас зовут,
+          чем вы занимаетесь, какими технологиями разработки владеете.
+        </p>
+        <p class="about-author__paragraph">
+          Также можно рассказать о процессе обучения в Практикуме, чему вы тут научились,
+          и чем можете помочь потенциальным заказчикам.
+        </p>
+      </div>
+    </section>
+    <footer class="footer">
+      <span class="footer__copyright">&COPY; 2019  Supersite</span>
+      <ul class="footer__contacts">
+        <li class="footer__contact"><a href="#" class="footer__link">Главная</a></li>
+        <li class="footer__contact"><a href="#" class="footer__link">О проекте</a></li>
+        <li class="footer__contact"><a href="#" class="footer__link">Яндекс.Практикум</a></li>
+      </ul>
+      <ul class="footer__social">
+        <li class="footer__social-icon">
+          <a href="#">
+            <img src="<%=require('./images/git.png').default%>" alt="GitHub">
+          </a>
+        </li>
+        <li class="footer__social-icon">
+          <a href="#">
+            <img src="<%=require('./images/fb.png').default%>" alt="facebook">
+          </a>
+        </li>
+      </ul>
+    </footer>
+  </div>
+
+
+
+  <template>
+    <article class="load">
+      <div class="load__spinner"></div>
+      <p class="load__text">Идет поиск новостей...</p>
+    </article>
+  </template>
+
+  <template>
+    <article class="not-found">
+      <img src="<%=require('./images/not-found_v1.png').default%>" alt="">
+      <h2 class="not-found__title">
+        Ничего не найдено
+      </h2>
+      <p class="not-found__subtitle">
+        К сожалению по вашему запросу
+        ничего не найдено.
+      </p>
+    </article>
+  </template>
+  <!-- hello
   <img src="<%=require('./images/test.jpg').default%>" width="300px" height="300px">
   <a href="./about.html">эбаут</a>
-  <a href="./analytics.html">аналитикс</a>
+  <a href="./analytics.html">аналитикс</a> -->
 <script src="<%= htmlWebpackPlugin.files.js %>"></script>
 </body>
 </html>

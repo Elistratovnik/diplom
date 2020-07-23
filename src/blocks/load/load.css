@@ -1,0 +1,8 @@
+@import url('./__spinner/load__spinner.css');
+@import url('./__text/load__text.css');
+
+.load {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}

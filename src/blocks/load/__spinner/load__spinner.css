@@ -1,0 +1,13 @@
+@keyframes spinner-circle {
+  0% { transform: rotate(180deg); }
+  100% { transform: rotate(-180deg); }
+}
+
+.load__spinner {
+  width: 74px;
+  height: 74px;
+  background-image: url('../../../images/Ellipse.png');
+  border-radius: 50%;
+  border-image-slice: 1;
+  animation: spinner-circle 0.8s ease-in-out infinite;
+}

@@ -1,0 +1,14 @@
+.news-result__button {
+  display: block;
+  color: black;
+  background-color: white;
+  margin: 0 auto;
+}
+
+.news-result__button:hover {
+  background-color: lightgrey;
+}
+
+.news-result__button:active {
+  opacity: 0.8;
+}

@@ -1,0 +1,12 @@
+.search-field__button {
+  color: white;
+  background-color: #2F71E5;
+}
+
+.search-field__button:hover {
+  background-color: #3c78ed;
+}
+
+.search-field__button:active {
+  background-color: #5b90eb;
+}

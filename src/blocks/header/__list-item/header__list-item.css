@@ -1,0 +1,11 @@
+@import url('./_active.css');
+
+.header__list-item {
+  display: flex;
+  align-items: center;
+  color: #B6BCBF;
+}
+
+.header__list-item:first-child {
+  margin-right: 34px;
+}
