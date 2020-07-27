@@ -1,0 +1,8 @@
+.technologies__item {
+  margin: 0;
+  margin-right: 73px;
+}
+
+.technologies__item:last-child {
+  margin-right: 0;
+}

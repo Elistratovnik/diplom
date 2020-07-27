@@ -1,0 +1,9 @@
+.slide__date {
+  display: block;
+  font-family: "Roboto";
+  font-weight: normal;
+  font-size: 14px;
+  line-height: 22px;
+  color: #B6BCBF;
+  margin-bottom: 16px;
+}

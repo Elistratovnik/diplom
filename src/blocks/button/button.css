@@ -8,6 +8,7 @@
   padding-right: 54px;
   border-radius: 32px;
   border: none;
+  cursor: pointer;
 }
 
 .button:focus {

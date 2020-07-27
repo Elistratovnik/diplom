@@ -1,0 +1,7 @@
+.swiper__wrapper {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  margin-bottom: 48px;
+  min-height: 288px;
+}

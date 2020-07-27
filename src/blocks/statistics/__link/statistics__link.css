@@ -1,0 +1,6 @@
+@import url('./_current-path.css');
+
+.statistics__link {
+  color: #1A1B22;
+  text-decoration: none;
+}

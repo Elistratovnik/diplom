@@ -1,0 +1,10 @@
+.slide__avatar {
+  width: 64px;
+  height: 64px;
+  border-radius: 50%;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-image: url('../../../images/test.jpg');
+  margin-right: 15px;
+}

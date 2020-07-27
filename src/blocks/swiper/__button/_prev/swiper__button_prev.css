@@ -1,0 +1,13 @@
+.swiper__button.swiper__button_prev {
+  transform: rotate(180deg);
+  left: -80px;
+}
+
+.swiper__button.swiper__button_prev:hover {
+  transform: scale(1.1) rotate(180deg);
+}
+
+.swiper__button.swiper__button_prev:active {
+  transform: scale(1) rotate(180deg);
+}
+

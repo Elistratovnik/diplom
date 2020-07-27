@@ -1,9 +1,10 @@
-@import url('./_active.css');
+@import url('./_active/header__list-item_active.css');
+@import url('./_theme/header__list-item_theme_dark.css');
+@import url('./_theme/header__list-item_theme_light.css');
 
 .header__list-item {
   display: flex;
   align-items: center;
-  color: #B6BCBF;
 }
 
 .header__list-item:first-child {

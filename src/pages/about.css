@@ -1,5 +1,35 @@
 @import url('../vendor/normalize.css');
+@import url('../blocks/page/page.css');
+@import url('../blocks/header/header.css');
+@import url('../blocks/about-author/about-author.css');
+@import url('../blocks/footer/footer.css');
+@import url('../blocks/client/client.css');
+@import url('../blocks/technologies/technologies.css');
+@import url('../blocks/commits/commits.css');
+@import url('../blocks/section-title/section-title.css');
+@import url('../blocks/section-link/section-link.css');
+@import url('../blocks/swiper/swiper.css');
+@import url('../blocks/slide/slide.css');
 
-body {
-  background-color: firebrick;
+
+@font-face {
+  src: url(../vendor/fonts/roboto-medium.woff) format('woff');
+  font-family: 'Roboto';
+  font-weight: 500;
+}
+
+@font-face {
+  src: url(../vendor/fonts/roboto-regular.woff) format('woff');
+  font-family: 'Roboto';
+  font-weight: 400;
+}
+
+@font-face {
+  src: url(../vendor/fonts/robotoslab-regular.woff) format('woff');
+  font-family: 'Roboto Slab';
+}
+
+@font-face {
+  src: url(../vendor/fonts/sourcesanspro-regular.woff) format('woff');
+  font-family: 'Source Sans Pro';
 }

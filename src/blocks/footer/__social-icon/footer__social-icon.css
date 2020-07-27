@@ -7,3 +7,7 @@
 .footer__social-icon:last-child {
   margin-right: 0;
 }
+
+.footer__social-icon:hover {
+  opacity: 0.8;
+}

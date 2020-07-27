@@ -97,13 +97,13 @@ module.exports = {
     }),
     new HtmlWebpackPlugin({
       inject: false,
-      template: './src/about/index.html',
+      template: './src/about.html',
       chunks: ['about'],
       filename: 'about.html'
     }),
     new HtmlWebpackPlugin({
       inject: false,
-      template: './src/analytics/index.html',
+      template: './src/analytics.html',
       chunks: ['analytics'],
       filename: 'analytics.html'
     }),

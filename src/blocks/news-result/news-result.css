@@ -1,9 +1,0 @@
-@import url('./__header/news-result__header.css');
-@import url('./__title/news-result__title.css');
-@import url('./__link/news-result__link.css');
-@import url('./__list/news-result__list.css');
-@import url('./__button/news-result__button.css');
-
-.news-result {
-  margin: 0 auto;
-}

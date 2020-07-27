@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="author" content="Елистратов Никита">
+  <meta name="description" content="Дипломная работа">
+  <title>NewsAnalyzer</title>
+  <link rel="shortcut icon" href="<%=require('./images/favicon.ico').default%>" type="image/x-icon">
+  <link rel="icon" href="<%=require('./images/favicon.ico').default%>" type="image/x-icon">
+  <link rel="stylesheet" href="<%=htmlWebpackPlugin.files.css %>">
+</head>
+<body>
+  <body class="body">
+    <div class="page body__page">
+      <header class="header header_color_black">
+        <span class="header__text-logo header__text-logo_white">NewsAnalyzer</span>
+        <nav class="header__navigation">
+          <ul class="header__list">
+            <li class="header__list-item"><a href="./index.html" class="header__link">Главная</a></li>
+            <li class="header__list-item header__list-item_active header__list-item_dark"><a href="./about.html" class="header__link">О проекте</a></li>
+          </ul>
+        </nav>
+      </header>
+      <section class="statistics">
+        <div class="statistics__path">
+          <a href="./index.html" class="statistics__link">Главная</a>
+          <a href="#" class="statistics__link statistics__link_current-path">&sol; Аналитика</a>
+        </div>
+        <h2 class="statistics__title">Вы спросили: «Путешествия»</h2>
+        <p class="statistics__subtitle">Новостей за неделю: <span class="statistics__result">34 324</span></p>
+        <p class="statistics__subtitle">Упоминаний в загаловках: <span class="statistics__result">235</span></p>
+      </section>
+      <section class="graph">
+        <h2 class="graph__title">Аналитика по дням</h2>
+      </section>
+      <footer class="footer">
+        <span class="footer__copyright">&COPY; 2019  Supersite</span>
+        <ul class="footer__contacts">
+          <li class="footer__contact"><a href="./index.html" class="footer__link">Главная</a></li>
+          <li class="footer__contact"><a href="./about.html" class="footer__link">О проекте</a></li>
+          <li class="footer__contact"><a href="https://praktikum.yandex.ru" target="_blank" class="footer__link">Яндекс.Практикум</a></li>
+        </ul>
+        <ul class="footer__social">
+          <li class="footer__social-icon">
+            <a href="#">
+              <img src="<%=require('./images/git.png').default%>" alt="GitHub">
+            </a>
+          </li>
+          <li class="footer__social-icon">
+            <a href="#">
+              <img src="<%=require('./images/fb.png').default%>" alt="facebook">
+            </a>
+          </li>
+        </ul>
+      </footer>
+    </div>
+    <!-- hello
+    <img src="<%=require('./images/test.jpg').default%>" width="300px" height="300px">
+    <a href="./about.html">эбаут</a>
+    <a href="./analytics.html">аналитикс</a> -->
+<script src="<%= htmlWebpackPlugin.files.js %>"></script>
+</body>
+</html>

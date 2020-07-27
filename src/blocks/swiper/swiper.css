@@ -1,0 +1,34 @@
+@import url('./__container/swiper__container.css');
+@import url('./__wrapper/swiper__wrapper.css');
+@import url('./__pagination/swiper__pagination.css');
+@import url('./__point/swiper__point.css');
+@import url('./__button/swiper__button.css');
+
+.swiper {
+  position: relative;
+  width: calc(100% + 204px);
+  margin: 0 -104px;
+  overflow: hidden;
+}
+
+.swiper::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 50px;
+  height: 100%;
+  background-image: linear-gradient(to right, #F5F6F7, transparent);
+  z-index: 2;
+}
+
+.swiper::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 50px;
+  height: 100%;
+  background-image: linear-gradient(to left, #F5F6F7, transparent);
+  z-index: 2;
+}

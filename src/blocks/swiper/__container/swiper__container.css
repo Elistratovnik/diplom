@@ -1,0 +1,4 @@
+.swiper__container {
+  width: calc(100% - 204px);
+  margin: 0 auto;
+}

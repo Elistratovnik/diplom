@@ -1,0 +1,23 @@
+@import url('./_prev/swiper__button_prev.css');
+
+.swiper__button {
+  width: 40px;
+  height: 40px;
+  position: absolute;
+  z-index: 3;
+  top: 0;
+  bottom: 0;
+  right: -80px;
+  margin: auto 0;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-image: url('../../../images/slider-control.png');
+}
+
+.swiper__button:hover {
+  transform: scale(1.1);
+}
+
+.swiper__button:active {
+  transform: scale(1);
+}
