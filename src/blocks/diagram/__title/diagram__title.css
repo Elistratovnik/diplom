@@ -1,0 +1,9 @@
+.diagram__title {
+  margin: 0;
+  margin-bottom: 48px;
+  font-family: "Roboto Slab";
+  font-weight: normal;
+  font-size: 26px;
+  line-height: 30px;
+  color: #1A1B22;
+}

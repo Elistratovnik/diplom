@@ -1,0 +1,6 @@
+@import url('./__title/diagram__title.css');
+
+.diagram {
+  background-color: #F5F6F7;
+  padding: 80px 104px;
+}

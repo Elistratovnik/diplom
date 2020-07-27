@@ -1,0 +1,14 @@
+.table__cell_result {
+  background-color: #2F71E5;
+  display: flex;
+  align-items: center;
+  width: 50%;
+  height: 24px;
+  padding-left: 6px;
+  font-family: "Roboto";
+  font-weight: bold;
+  font-size: 12px;
+  line-height: 16px;
+  letter-spacing: 0.4px;
+  color: white ;
+}

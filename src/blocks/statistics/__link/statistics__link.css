@@ -4,3 +4,7 @@
   color: #1A1B22;
   text-decoration: none;
 }
+
+.statistics__link:hover {
+  text-decoration: underline;
+}

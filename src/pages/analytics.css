@@ -3,7 +3,9 @@
 @import url('../blocks/header/header.css');
 @import url('../blocks/footer/footer.css');
 @import url('../blocks/statistics/statistics.css');
-@import url('../blocks/graph/graph.css');
+@import url('../blocks/diagram/diagram.css');
+@import url('../blocks/section-title/section-title.css');
+@import url('../blocks/table/table.css');
 
 
 @font-face {

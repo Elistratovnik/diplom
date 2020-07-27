@@ -1,0 +1,10 @@
+.table__row_heading {
+  padding-bottom: 16px;
+  font-family: "Roboto";
+  font-weight: normal;
+  font-size: 12px;
+  line-height: 16px;
+  letter-spacing: 0.4px;
+  text-transform: uppercase;
+  color: #B6BCBF;
+}
