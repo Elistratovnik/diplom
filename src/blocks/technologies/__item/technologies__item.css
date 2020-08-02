@@ -1,8 +1,14 @@
 .technologies__item {
   margin: 0;
-  margin-right: 73px;
+  margin-right: 69px;
 }
 
 .technologies__item:last-child {
   margin-right: 0;
+}
+
+@media (max-width: 680px) {
+  .technologies__item {
+    margin: 0;
+  }
 }

@@ -4,3 +4,11 @@
   margin: 0;
   display: flex;
 }
+
+@media (max-width: 680px) {
+  .footer__social {
+    position: absolute;
+    top: 20px;
+    right: 16px;
+  }
+}

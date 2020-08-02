@@ -5,3 +5,9 @@
   line-height: 22px;
   color: #B6BCBF;
 }
+
+@media (max-width: 680px) {
+  .footer__copyright {
+    order: 1;
+  }
+}

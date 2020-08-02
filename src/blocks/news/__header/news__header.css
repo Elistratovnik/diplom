@@ -4,3 +4,15 @@
   margin-bottom: 64px;
   align-items: baseline;
 }
+
+@media (max-width: 768px) {
+  .news__header {
+    margin-bottom: 32px;
+  }
+}
+
+@media (max-width: 640px) {
+  .news__header {
+    flex-direction: column;
+  }
+}

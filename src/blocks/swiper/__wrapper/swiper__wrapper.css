@@ -5,3 +5,9 @@
   margin-bottom: 48px;
   min-height: 288px;
 }
+
+@media (max-width: 1000px) {
+  .swiper__wrapper {
+    justify-content: flex-start;
+  }
+}

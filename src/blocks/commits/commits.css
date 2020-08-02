@@ -3,5 +3,11 @@
 
 .commits {
   background-color: #F5F6F7;
-  padding: 80px 104px;
+  padding: 73px 104px;
+}
+
+@media (max-width: 768px) {
+  .commits {
+    padding: 40px;
+  }
 }

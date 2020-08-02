@@ -9,4 +9,26 @@
   padding-top: 80px;
   padding-left: 104px;
   padding-bottom: 80px;
+  padding-right: 40px;
 }
+
+@media (max-width: 768px) {
+  .about-author {
+    padding: 40px;
+  }
+}
+
+
+@media (max-width: 680px) {
+  .about-author {
+    padding: 32px 16px;
+  }
+}
+
+@media (max-width: 487px) {
+  .about-author {
+    flex-direction: column;
+    align-items: center;
+  }
+}
+

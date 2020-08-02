@@ -2,7 +2,7 @@
 @import url('./_day/table__column_day.css');
 
 .table__column {
-  height: 520px;
+  height: 503px;
   display: flex;
   flex-direction: column;
   justify-content: space-between;

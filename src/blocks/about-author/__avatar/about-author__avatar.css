@@ -8,3 +8,18 @@
  background-size: cover;
  background-position: center;
 }
+
+@media (max-width: 950px) {
+  .about-author__avatar {
+    width: 232px;
+    height: 232px;
+    margin-right: 32px;
+  }
+}
+
+@media (max-width: 487px) {
+  .about-author__avatar {
+    margin-right: 0;
+    margin-bottom: 24px;
+  }
+}

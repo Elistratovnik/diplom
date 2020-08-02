@@ -6,7 +6,7 @@
   line-height: 24px;
   color: #1A1B22;
   text-decoration: none;
-  padding-right: 18px;
+  padding-right: 26px;
   transition: 500ms ease;
 }
 
@@ -19,7 +19,7 @@
   position: absolute;
   width: 8px;
   height: 13px;
-  right: 0;
+  right: 7px;
   top: 0;
   bottom: 0;
   margin: auto 0;

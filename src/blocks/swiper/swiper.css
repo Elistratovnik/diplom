@@ -32,3 +32,19 @@
   background-image: linear-gradient(to left, #F5F6F7, transparent);
   z-index: 2;
 }
+
+@media (max-width: 1000px) {
+  .swiper::before {
+    background-image: none;
+  }
+
+  .swiper::after {
+    background-image: none;
+  }
+}
+
+@media (max-width: 768px) {
+  .swiper {
+    margin: 0 -40px;
+  }
+}

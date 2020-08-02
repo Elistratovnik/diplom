@@ -8,3 +8,9 @@
 .header__list-item:first-child {
   margin-right: 34px;
 }
+
+@media (max-width: 680px) {
+  .header__list-item:first-child {
+    margin-right: 12px;
+  }
+}

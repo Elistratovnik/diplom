@@ -14,3 +14,23 @@
 .button:focus {
   outline: none;
 }
+
+@media (max-width: 768px) {
+  .button {
+    height: 56px;
+    padding-left: 50px;
+    padding-right: 49px;
+    border-radius: 28px;
+  }
+}
+
+@media (max-width: 368px) {
+  .button {
+    width: 100%;
+  }
+}
+
+
+
+
+

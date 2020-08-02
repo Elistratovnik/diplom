@@ -3,12 +3,17 @@
 @import url('./__description/lead__description.css');
 @import url('./__header/lead__header.css');
 
-
-
 .lead {
   background-image: url("../../images/cover.png");
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
-  min-height: 576px;
+  padding-bottom: 80px;
+}
+
+@media (max-width: 768px) {
+  .lead {
+    padding-bottom: 48px;
+    background-image: url("../../images/cover-mini.png");
+  }
 }

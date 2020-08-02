@@ -2,3 +2,9 @@
   width: calc(100% - 204px);
   margin: 0 auto;
 }
+
+@media (max-width: 768px) {
+  .swiper__container {
+    width: calc(100% - 80px);
+  }
+}

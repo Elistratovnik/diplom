@@ -8,7 +8,23 @@
 
 .header {
   display: flex;
+  flex-wrap: wrap;
   justify-content: space-between;
   padding: 0 100px;
   min-height: 80px;
+}
+
+
+@media (max-width: 768px) {
+  .header {
+    padding: 0 40px;
+    min-height: 64px;
+  }
+}
+
+@media (max-width: 680px) {
+  .header {
+    padding: 0 16px;
+    min-height: 56px;
+  }
 }

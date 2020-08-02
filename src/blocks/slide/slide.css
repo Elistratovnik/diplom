@@ -17,3 +17,15 @@
   border-radius: 16px;
   background-color: white;
 }
+
+@media (max-width: 1000px) {
+  .slide {
+    width: calc(50% - 16px);
+  }
+}
+
+@media (max-width: 1000px) {
+  .slide:first-child {
+    margin-left: 0;
+  }
+}
