@@ -11,3 +11,8 @@
   opacity: 0.8;
 }
 
+@media (max-width: 850px) {
+  .footer__link {
+    font-family: 'Source Sans Pro';
+  }
+}

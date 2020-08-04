@@ -4,3 +4,17 @@
   background-color: #F5F6F7;
   padding: 74px 104px;
 }
+
+@media (max-width: 850px) {
+  .diagram {
+    padding: 36px 40px;
+  }
+}
+
+@media (max-width: 680px) {
+  .diagram {
+    padding: 16px;
+    padding-bottom: 32px;
+    padding-top: 24px;
+  }
+}

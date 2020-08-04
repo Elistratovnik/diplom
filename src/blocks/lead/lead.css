@@ -17,3 +17,9 @@
     background-image: url("../../images/cover-mini.png");
   }
 }
+
+@media (max-width: 450px) {
+  .lead {
+    padding-bottom: 32px;
+  }
+}

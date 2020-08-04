@@ -1,10 +1,23 @@
 .swiper__container {
   width: calc(100% - 204px);
+  height: 288px;
   margin: 0 auto;
+  overflow: visible;
+  padding-bottom: 68px;
 }
 
-@media (max-width: 768px) {
+@media (max-width: 850px) {
   .swiper__container {
     width: calc(100% - 80px);
+    height: 242px;
+    padding-bottom: 53px;
+  }
+}
+
+@media (max-width: 680px) {
+  .swiper__container {
+    height: 264px;
+    width: calc(100% - 32px);
+    padding-bottom: 38px;
   }
 }

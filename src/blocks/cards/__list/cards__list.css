@@ -11,6 +11,13 @@
   .cards__list {
     grid-template-columns: repeat(auto-fill, minmax(224px, 1fr));
     grid-gap: 8px;
-    margin-bottom: 24px;
+    margin-bottom: 32px;
+  }
+}
+
+
+@media (max-width: 450px) {
+  .cards__list {
+    margin-bottom: 12px;
   }
 }

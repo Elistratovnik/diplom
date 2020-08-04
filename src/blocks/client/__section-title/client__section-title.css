@@ -1,0 +1,17 @@
+.client__section-title {
+  margin: 0;
+  margin-bottom: 24px;
+}
+
+
+@media (max-width: 850px) {
+  .client__section-title {
+    margin-bottom: 16px;
+  }
+}
+
+@media (max-width: 450px) {
+  .client__section-title {
+    margin-bottom: 17px;
+  }
+}

@@ -8,12 +8,21 @@
 
 @media (max-width: 850px) {
   .footer__contact {
-    margin-right: 25px;
+    margin-right: 30px;
   }
 }
 
 @media (max-width: 680px) {
   .footer__contact {
     margin-bottom: 40px;
+  }
+  .footer__contact:last-child {
+    margin-bottom: 0;
+  }
+}
+
+@media (max-width: 450px) {
+  .footer__contact {
+    margin-bottom: 24px;
   }
 }

@@ -5,3 +5,9 @@
   font-size: 26px;
   line-height: 30px;
 }
+
+@media (max-width: 850px) {
+  .slide__name {
+    font-size: 20px;
+  }
+}

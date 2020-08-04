@@ -7,3 +7,9 @@
   flex-direction: column;
   justify-content: space-between;
 }
+
+@media (max-width: 400px) {
+  .table__column {
+    height: 310px;
+  }
+}

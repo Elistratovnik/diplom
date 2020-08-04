@@ -9,3 +9,10 @@
   margin-right: 15px;
   flex-shrink: 0;
 }
+
+@media (max-width: 850px) {
+  .slide__avatar {
+    width: 48px;
+    height: 48px;
+  }
+}

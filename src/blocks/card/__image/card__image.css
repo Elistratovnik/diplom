@@ -10,7 +10,14 @@
 
 @media (max-width: 768px) {
   .card__image {
-    margin-bottom: 16px;
+    margin-bottom: 17px;
     height: 150px;
   }
 }
+
+@media (max-width: 450px) {
+  .card__image {
+    height: 196px;
+  }
+}
+

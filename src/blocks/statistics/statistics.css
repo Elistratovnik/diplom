@@ -7,3 +7,17 @@
 .statistics {
   padding: 40px 100px 80px;
 }
+
+@media (max-width: 850px) {
+  .statistics {
+    padding: 40px;
+    padding-top: 32px;
+  }
+}
+
+@media (max-width: 680px) {
+  .statistics {
+    padding: 16px;
+    padding-bottom: 24px;
+  }
+}

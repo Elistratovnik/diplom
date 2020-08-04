@@ -5,9 +5,9 @@
 @import url('../blocks/footer/footer.css');
 @import url('../blocks/client/client.css');
 @import url('../blocks/technologies/technologies.css');
-@import url('../blocks/commits/commits.css');
 @import url('../blocks/section-title/section-title.css');
 @import url('../blocks/section-link/section-link.css');
+@import url('../blocks/commits/commits.css');
 @import url('../blocks/swiper/swiper.css');
 @import url('../blocks/slide/slide.css');
 

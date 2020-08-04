@@ -7,3 +7,9 @@
   color: #B6BCBF;
   margin-bottom: 16px;
 }
+
+@media (max-width: 680px) {
+  .slide__date {
+    margin-bottom: 9px;
+  }
+}

@@ -15,9 +15,9 @@
 }
 
 
-@media (max-width: 768px) {
+@media (max-width: 850px) {
   .header {
-    padding: 0 40px;
+    padding: 0 41px;
     min-height: 64px;
   }
 }

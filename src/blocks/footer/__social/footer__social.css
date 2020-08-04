@@ -5,6 +5,13 @@
   display: flex;
 }
 
+@media (max-width: 850px) {
+  .footer__social {
+    margin-left: 68px;
+  }
+}
+
+
 @media (max-width: 680px) {
   .footer__social {
     position: absolute;

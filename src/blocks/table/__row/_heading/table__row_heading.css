@@ -1,5 +1,5 @@
 .table__row_heading {
-  padding-bottom: 9px;
+  padding-bottom: 14px;
   font-family: "Roboto";
   font-weight: normal;
   font-size: 12px;
@@ -7,4 +7,12 @@
   letter-spacing: 0.4px;
   text-transform: uppercase;
   color: #B6BCBF;
+  border-bottom: 1px solid #1A1B22;
+}
+
+@media (max-width: 400px) {
+  .table__row_heading {
+    margin-bottom: 18px;
+    padding-bottom: 10px;
+  }
 }

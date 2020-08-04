@@ -9,12 +9,12 @@
   padding-top: 80px;
   padding-left: 104px;
   padding-bottom: 80px;
-  padding-right: 40px;
+  padding-right: 104px;
 }
 
-@media (max-width: 768px) {
+@media (max-width: 850px) {
   .about-author {
-    padding: 40px;
+    padding: 46px 40px;
   }
 }
 

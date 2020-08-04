@@ -1,12 +1,9 @@
 @import url('./__container/swiper__container.css');
-@import url('./__wrapper/swiper__wrapper.css');
-@import url('./__pagination/swiper__pagination.css');
-@import url('./__point/swiper__point.css');
+@import url('./__bullet/swiper-pagination-bullet.css');
 @import url('./__button/swiper__button.css');
 
 .swiper {
   position: relative;
-  width: calc(100% + 204px);
   margin: 0 -104px;
   overflow: hidden;
 }
@@ -43,8 +40,14 @@
   }
 }
 
-@media (max-width: 768px) {
+@media (max-width: 850px) {
   .swiper {
     margin: 0 -40px;
+  }
+}
+
+@media (max-width: 680px) {
+  .swiper {
+    margin: 0 -16px 11px -16px;
   }
 }

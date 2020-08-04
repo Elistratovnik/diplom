@@ -14,5 +14,6 @@
 @media (max-width: 640px) {
   .news__header {
     flex-direction: column;
+    margin-bottom: 36px;
   }
 }
