@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ru">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -10,7 +10,6 @@
   <link rel="icon" href="<%=require('./images/favicon.ico').default%>" type="image/x-icon">
   <link rel="stylesheet" href="<%=htmlWebpackPlugin.files.css %>">
 </head>
-<body>
   <body class="body">
     <div class="page body__page">
       <header class="header header_theme_dark">
@@ -74,7 +73,7 @@
           </figure>
           <figure class="technologies__item">
             <figcaption class="technologies__caption">
-              Java&nbspScript
+              Java&nbsp;Script
             </figcaption>
             <img src="<%=require('./images/js.png').default%>" alt="Java Script-icon" class="technologies__image">
           </figure>
@@ -103,7 +102,7 @@
       </section>
       <section class="commits">
         <header class="commits__header">
-          <h2 class="section-title commits__section-title">История коммитов из&nbspGitHub</h2>
+          <h2 class="section-title commits__section-title">История коммитов из&nbsp;GitHub</h2>
           <a href="#" class="section-link commits__section-link">Открыть в  Github</a>
         </header>
         <article class="swiper">
@@ -161,9 +160,9 @@
       <footer class="footer">
         <span class="footer__copyright">&COPY; 2019  Supersite</span>
         <ul class="footer__contacts">
-          <li class="footer__contact"><a href="#" class="footer__link">Главная</a></li>
-          <li class="footer__contact"><a href="#" class="footer__link">О&nbspпроекте</a></li>
-          <li class="footer__contact"><a href="#" target="_blank" class="footer__link">Яндекс.Практикум</a></li>
+          <li class="footer__contact"><a href="./index.html" class="footer__link">Главная</a></li>
+          <li class="footer__contact"><a href="./about.html" class="footer__link">О&nbsp;проекте</a></li>
+          <li class="footer__contact"><a href="https://praktikum.yandex.ru" target="_blank" class="footer__link">Яндекс.Практикум</a></li>
         </ul>
         <ul class="footer__social">
           <li class="footer__social-icon">
@@ -179,10 +178,6 @@
         </ul>
       </footer>
     </div>
-    <!-- hello
-    <img src="<%=require('./images/test.jpg').default%>" width="300px" height="300px">
-    <a href="./about.html">эбаут</a>
-    <a href="./analytics.html">аналитикс</a> -->
-<script src="<%= htmlWebpackPlugin.files.js %>"></script>
-</body>
+  <script src="<%= htmlWebpackPlugin.files.js %>"></script>
+  </body>
 </html>
