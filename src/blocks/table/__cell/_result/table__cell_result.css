@@ -1,11 +1,11 @@
 .table__cell_result {
-  background-color: #2F71E5;
+  background-color: #2f71e5;
   display: flex;
   align-items: center;
   width: 50%;
   height: 24px;
   padding-left: 6px;
-  font-family: "Roboto";
+  font-family: 'Roboto', Arial, sans-serif;
   font-weight: bold;
   font-size: 12px;
   line-height: 16px;

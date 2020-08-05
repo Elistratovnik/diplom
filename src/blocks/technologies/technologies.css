@@ -5,7 +5,7 @@
 @import url('./__section-title/technologies__section-title.css');
 
 .technologies {
-  background-color: #F5F6F7;
+  background-color: #f5f6f7;
   padding: 83px 104px 91px 104px;
   display: flex;
   justify-content: space-between;

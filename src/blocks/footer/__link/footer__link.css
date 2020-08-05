@@ -1,10 +1,10 @@
 .footer__link {
   text-decoration: none;
-  font-family: "Roboto";
+  font-family: 'Roboto', Arial, sans-serif;
   font-weight: normal;
   font-size: 18px;
   line-height: 24px;
-  color: #1A1B22;
+  color: #1a1b22;
 }
 
 .footer__link:hover {
@@ -13,6 +13,6 @@
 
 @media (max-width: 850px) {
   .footer__link {
-    font-family: 'Source Sans Pro';
+    font-family: 'Source Sans Pro', Arial, sans-serif;
   }
 }

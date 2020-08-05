@@ -4,6 +4,11 @@
   border-radius: 32px;
   margin-right: -52px;
   padding-left: 24px;
+  font-family: 'Roboto', Arial, sans-serif;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 16px;
+  line-height: 22px;
 }
 
 .search-field__input:focus {

@@ -1,9 +1,10 @@
 .slide__name {
   margin: 0;
-  font-family: "Roboto Slab";
+  font-family: 'Roboto Slab', Arial, sans-serif;
   font-weight: normal;
   font-size: 26px;
   line-height: 30px;
+  color: #1a1b22;
 }
 
 @media (max-width: 850px) {

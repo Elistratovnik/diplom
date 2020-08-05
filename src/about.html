@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="ru">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -10,174 +11,181 @@
   <link rel="icon" href="<%=require('./images/favicon.ico').default%>" type="image/x-icon">
   <link rel="stylesheet" href="<%=htmlWebpackPlugin.files.css %>">
 </head>
-  <body class="body">
-    <div class="page body__page">
-      <header class="header header_theme_dark">
-        <span class="header__text-logo header__text-logo_theme_dark">NewsAnalyzer</span>
-        <nav class="header__navigation">
-          <ul class="header__list">
-            <li class="header__list-item">
-              <a href="./index.html" class="header__link header__link_theme_dark">Главная</a>
-            </li>
-            <li class="header__list-item header__list-item_active">
-              <a href="./about.html" class="header__link header__link_theme_dark header__link_active">О проекте</a>
-            </li>
-          </ul>
-        </nav>
+
+<body class="body">
+  <div class="page body__page">
+    <header class="header header_theme_dark">
+      <span class="header__text-logo header__text-logo_theme_dark">NewsAnalyzer</span>
+      <nav class="header__navigation">
+        <ul class="header__list">
+          <li class="header__list-item">
+            <a href="./index.html" class="header__link header__link_theme_dark">Главная</a>
+          </li>
+          <li class="header__list-item header__list-item_active">
+            <a href="./about.html" class="header__link header__link_theme_dark header__link_active">О проекте</a>
+          </li>
+        </ul>
+      </nav>
+    </header>
+    <section class="client">
+      <h2 class="client__section-title section-title">
+        Клиентам
+      </h2>
+      <div class="client__description">
+        <p class="client__paragraph">
+          Этот сайт — дипломный проект студента Яндекс.Практикума.
+          Его цель — показать, чему научился студент, какими технологиями владеет.
+        </p>
+        <p class="client__paragraph">
+          Вёрстка сайта выполнена по методологии БЭМ. Это делает сайт гибким и масштабируемым.
+          Кроме того, добавлять новые страницы и функциональность проще и быстрее, чем в проектах,
+          выполненных по другим методологиям. Также сайт проще и дешевле поддерживать.
+        </p>
+        <p class="client__paragraph">
+          Карточки с новостями приходят с сервера и обрабатываются асинхронно.
+          То есть сайт продолжает работать, пока от сервера приходит ответ.
+          Это повышает удобство использования сервиса.
+        </p>
+        <p class="client__paragraph">
+          При создании проекта была использована сборка технологией Webpack.
+          Это современный подход к разработке сайтов. Код оптимизируется, а значит, сайт работает быстрее.
+          Также сайт работает в старых браузерах. Даже если посетители — пользователи старых операционных систем,
+          у них не будет проблем с отображением. А значит, потенциальная аудитория возрастает.
+        </p>
+        <p class="client__paragraph">
+          Проект был проверен экспертами Яндекс.Практикума.
+          Если вашему бизнесу нужен сайт, мы рекомендуем обратиться к этому студенту.
+        </p>
+      </div>
+    </section>
+    <section class="technologies">
+      <h2 class="technologies__section-title section-title">Используемые технологии</h2>
+      <div class="technologies__items-container">
+        <figure class="technologies__item">
+          <figcaption class="technologies__caption">
+            HTML
+          </figcaption>
+          <img src="<%=require('./images/html.png').default%>" alt="html-icon" class="technologies__image">
+        </figure>
+        <figure class="technologies__item">
+          <figcaption class="technologies__caption">
+            CSS
+          </figcaption>
+          <img src="<%=require('./images/css.png').default%>" alt="css-icon" class="technologies__image">
+        </figure>
+        <figure class="technologies__item">
+          <figcaption class="technologies__caption">
+            Java&nbsp;Script
+          </figcaption>
+          <img src="<%=require('./images/js.png').default%>" alt="Java Script-icon" class="technologies__image">
+        </figure>
+        <figure class="technologies__item">
+          <figcaption class="technologies__caption">
+            Webpack
+          </figcaption>
+          <img src="<%=require('./images/wp.png').default%>" alt="Webpack-icon" class="technologies__image">
+        </figure>
+      </div>
+    </section>
+    <section class="about-author">
+      <div class="about-author__avatar"></div>
+      <div class="about-author__description">
+        <h2 class="section-title about-author__section-title">Об авторе</h2>
+        <p class="about-author__paragraph">
+          Это блок с описанием автора проекта. Здесь следует указать, как вас зовут,
+          чем вы занимаетесь, какими технологиями разработки владеете.
+        </p>
+        <p class="about-author__paragraph">
+          Также можно рассказать о процессе обучения в Практикуме, чему вы тут научились,
+          и чем можете помочь потенциальным заказчикам.
+          Если хотите, оставьте свои контакты: email и телефон. Так заказчики смогут с вами связаться.
+        </p>
+      </div>
+    </section>
+    <section class="commits">
+      <header class="commits__header">
+        <h2 class="section-title commits__section-title">История коммитов из&nbsp;GitHub</h2>
+        <a href="https://github.com/Elistratovnik" class="section-link commits__section-link" target="_blank">Открыть в Github</a>
       </header>
-      <section class="client">
-        <h2 class="client__section-title section-title">
-          Клиентам
-        </h2>
-        <div class="client__description">
-          <p class="client__paragraph">
-            Этот сайт — дипломный проект студента Яндекс.Практикума.
-            Его цель — показать, чему научился студент, какими технологиями владеет.
-          </p>
-          <p class="client__paragraph">
-            Вёрстка сайта выполнена по методологии БЭМ. Это делает сайт гибким и масштабируемым.
-            Кроме того, добавлять новые страницы и функциональность проще и быстрее, чем в проектах,
-            выполненных по другим методологиям. Также сайт проще и дешевле поддерживать.
-          </p>
-          <p class="client__paragraph">
-            Карточки с новостями приходят с сервера и обрабатываются асинхронно.
-            То есть сайт продолжает работать, пока от сервера приходит ответ.
-            Это повышает удобство использования сервиса.
-          </p>
-          <p class="client__paragraph">
-            При создании проекта была использована сборка технологией Webpack.
-            Это современный подход к разработке сайтов. Код оптимизируется, а значит, сайт работает быстрее.
-            Также сайт работает в старых браузерах. Даже если посетители — пользователи старых операционных систем,
-            у них не будет проблем с отображением. А значит, потенциальная аудитория возрастает.
-          </p>
-          <p class="client__paragraph">
-            Проект был проверен экспертами Яндекс.Практикума.
-            Если вашему бизнесу нужен сайт, мы рекомендуем обратиться к этому студенту.
-          </p>
-        </div>
-      </section>
-      <section class="technologies">
-        <h2 class="technologies__section-title section-title">Используемые технологии</h2>
-        <div class="technologies__items-container">
-          <figure class="technologies__item">
-            <figcaption class="technologies__caption">
-              HTML
-            </figcaption>
-            <img src="<%=require('./images/html.png').default%>" alt="html-icon" class="technologies__image">
-          </figure>
-          <figure class="technologies__item">
-            <figcaption class="technologies__caption">
-              CSS
-            </figcaption>
-            <img src="<%=require('./images/css.png').default%>" alt="css-icon" class="technologies__image">
-          </figure>
-          <figure class="technologies__item">
-            <figcaption class="technologies__caption">
-              Java&nbsp;Script
-            </figcaption>
-            <img src="<%=require('./images/js.png').default%>" alt="Java Script-icon" class="technologies__image">
-          </figure>
-          <figure class="technologies__item">
-            <figcaption class="technologies__caption">
-              Webpack
-            </figcaption>
-            <img src="<%=require('./images/wp.png').default%>" alt="Webpack-icon" class="technologies__image">
-          </figure>
-        </div>
-      </section>
-      <section class="about-author">
-        <div class="about-author__avatar"></div>
-        <div class="about-author__description">
-          <h2 class="section-title about-author__section-title">Об авторе</h2>
-          <p class="about-author__paragraph">
-            Это блок с описанием автора проекта. Здесь следует указать, как вас зовут,
-            чем вы занимаетесь, какими технологиями разработки владеете.
-          </p>
-          <p class="about-author__paragraph">
-            Также можно рассказать о процессе обучения в Практикуме, чему вы тут научились,
-            и чем можете помочь потенциальным заказчикам.
-            Если хотите, оставьте свои контакты: email и телефон. Так заказчики смогут с вами связаться.
-          </p>
-        </div>
-      </section>
-      <section class="commits">
-        <header class="commits__header">
-          <h2 class="section-title commits__section-title">История коммитов из&nbsp;GitHub</h2>
-          <a href="#" class="section-link commits__section-link">Открыть в  Github</a>
-        </header>
-        <article class="swiper">
-          <div class="swiper-container swiper__container">
-            <div class="swiper-wrapper">
-              <div class="swiper-slide slide">
-                <span class="slide__date">14 августа, 2019</span>
-                <div class="slide__author">
-                  <div class="slide__avatar"></div>
-                  <div class="slide__info">
-                    <h3 class="slide__name">Антон Долинин</h3>
-                    <span class="slide__email">anton@yandex.ru</span>
-                  </div>
+      <article class="swiper">
+        <div class="swiper-container swiper__container">
+          <div class="swiper-wrapper">
+            <div class="swiper-slide slide">
+              <span class="slide__date">14 августа, 2019</span>
+              <div class="slide__author">
+                <div class="slide__avatar"></div>
+                <div class="slide__info">
+                  <h3 class="slide__name">Антон Долинин</h3>
+                  <span class="slide__email">anton@yandex.ru</span>
                 </div>
-                <p class="slide__text">
-                  Emmet (formerly Zen Coding) is a web-
-                  developer’s toolkit that can greatly improve your HTML & CSS workflow.
-                </p>
               </div>
-              <div class="swiper-slide slide swiper__slide">
-                <span class="slide__date">14 августа, 2019</span>
-                <div class="slide__author">
-                  <div class="slide__avatar"></div>
-                  <div class="slide__info">
-                    <h3 class="slide__name">Антон Долинин</h3>
-                    <span class="slide__email">anton@yandex.ru</span>
-                  </div>
-                </div>
-                <p class="slide__text">
-                  Emmet (formerly Zen Coding) is a web-
-                  developer’s toolkit that can greatly improve your HTML & CSS workflow.
-                </p>
-              </div>
-              <div class="swiper-slide slide swiper__slide">
-                <span class="slide__date">14 августа, 2019</span>
-                <div class="slide__author">
-                  <div class="slide__avatar"></div>
-                  <div class="slide__info">
-                    <h3 class="slide__name">Антон Долинин</h3>
-                    <span class="slide__email">anton@yandex.ru</span>
-                  </div>
-                </div>
-                <p class="slide__text">
-                  Emmet (formerly Zen Coding) is a web-
-                  developer’s toolkit that can greatly improve your HTML & CSS workflow.
-                </p>
-              </div>
+              <p class="slide__text">
+                Emmet (formerly Zen Coding) is a web-
+                developer’s toolkit that can greatly improve your HTML & CSS workflow.
+                Emmet (formerly Zen Coding) is a web-
+                developer’s toolkit that can greatly improve your HTML & CSS workflow.
+                Emmet (formerly Zen Coding) is a web-
+                developer’s toolkit that can greatly improve your HTML & CSS workflow.
+              </p>
             </div>
-            <div class="swiper-pagination"></div>
+            <div class="swiper-slide slide swiper__slide">
+              <span class="slide__date">14 августа, 2019</span>
+              <div class="slide__author">
+                <div class="slide__avatar"></div>
+                <div class="slide__info">
+                  <h3 class="slide__name">Антон Долинин</h3>
+                  <span class="slide__email">anton@yandex.ru</span>
+                </div>
+              </div>
+              <p class="slide__text">
+                Emmet (formerly Zen Coding) is a web-
+                developer’s toolkit that can greatly improve your HTML & CSS workflow.
+              </p>
+            </div>
+            <div class="swiper-slide slide swiper__slide">
+              <span class="slide__date">14 августа, 2019</span>
+              <div class="slide__author">
+                <div class="slide__avatar"></div>
+                <div class="slide__info">
+                  <h3 class="slide__name">Антон Долинин</h3>
+                  <span class="slide__email">anton@yandex.ru</span>
+                </div>
+              </div>
+              <p class="slide__text">
+                Emmet (formerly Zen Coding) is a web-
+                developer’s toolkit that can greatly improve your HTML & CSS workflow.
+              </p>
+            </div>
           </div>
-          <div class="swiper-button-prev swiper__button swiper__button_prev"></div>
-          <div class="swiper-button-next swiper__button swiper__button_next"></div>
-        </article>
-      </section>
-      <footer class="footer">
-        <span class="footer__copyright">&COPY; 2019  Supersite</span>
-        <ul class="footer__contacts">
-          <li class="footer__contact"><a href="./index.html" class="footer__link">Главная</a></li>
-          <li class="footer__contact"><a href="./about.html" class="footer__link">О&nbsp;проекте</a></li>
-          <li class="footer__contact"><a href="https://praktikum.yandex.ru" target="_blank" class="footer__link">Яндекс.Практикум</a></li>
-        </ul>
-        <ul class="footer__social">
-          <li class="footer__social-icon">
-            <a href="#">
-              <img src="<%=require('./images/git.png').default%>" alt="GitHub">
-            </a>
-          </li>
-          <li class="footer__social-icon">
-            <a href="#">
-              <img src="<%=require('./images/fb.png').default%>" alt="facebook">
-            </a>
-          </li>
-        </ul>
-      </footer>
-    </div>
+          <div class="swiper-pagination"></div>
+        </div>
+        <div class="swiper-button-prev swiper__button swiper__button_prev"></div>
+        <div class="swiper-button-next swiper__button swiper__button_next"></div>
+      </article>
+    </section>
+    <footer class="footer">
+      <span class="footer__copyright">&COPY; 2019 Supersite</span>
+      <ul class="footer__contacts">
+        <li class="footer__contact"><a href="./index.html" class="footer__link">Главная</a></li>
+        <li class="footer__contact"><a href="./about.html" class="footer__link">О&nbsp;проекте</a></li>
+        <li class="footer__contact"><a href="https://praktikum.yandex.ru" target="_blank"
+            class="footer__link">Яндекс.Практикум</a></li>
+      </ul>
+      <ul class="footer__social">
+        <li class="footer__social-icon">
+          <a href="https://github.com/Elistratovnik" target="_blank">
+            <img src="<%=require('./images/git.png').default%>" alt="GitHub">
+          </a>
+        </li>
+        <li class="footer__social-icon">
+          <a href="https://www.facebook.com/" target="_blank">
+            <img src="<%=require('./images/fb.png').default%>" alt="facebook">
+          </a>
+        </li>
+      </ul>
+    </footer>
+  </div>
   <script src="<%= htmlWebpackPlugin.files.js %>"></script>
-  </body>
+</body>
+
 </html>

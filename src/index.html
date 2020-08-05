@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="ru">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -10,6 +11,7 @@
   <link rel="icon" href="<%=require('./images/favicon.ico').default%>" type="image/x-icon">
   <link rel="stylesheet" href="<%=htmlWebpackPlugin.files.css %>">
 </head>
+
 <body class="body">
   <div class="page body__page">
     <section class="lead">
@@ -34,7 +36,7 @@
           прошедшую неделю.
         </p>
         <div class="search-field lead__search-field">
-          <input type="text" class="search-field__input" placeholder="Введите тему новости">
+          <input type="text" class="search-field__input" placeholder="Введите тему новости" required>
           <button class="button search-field__button">Искать</button>
         </div>
       </div>
@@ -71,7 +73,7 @@
           <div class="card">
             <div class="card__image"></div>
             <span class="card__date">2 августа, 2019</span>
-            <h3 class="card__title">Национальное достояние – парки</h3>
+            <h3 class="card__title">Национальное достояние – парки Национальное достояние – парки Национальное достояние – парки</h3>
             <p class="card__text">
               В 2016 году Америка отмечала важный юбилей: сто лет назад здесь начала
               складываться система национальных парков – охраняемых территорий, где и
@@ -98,20 +100,22 @@
       </div>
     </section>
     <footer class="footer">
-      <span class="footer__copyright">&COPY; 2019  Supersite</span>
+      <span class="footer__copyright">&COPY; 2019 Supersite</span>
       <ul class="footer__contacts">
         <li class="footer__contact"><a href="./index.html" class="footer__link">Главная</a></li>
         <li class="footer__contact"><a href="./about.html" class="footer__link">О&nbsp;проекте</a></li>
-        <li class="footer__contact"><a href="https://praktikum.yandex.ru" target="_blank" class="footer__link">Яндекс.Практикум</a></li>
+        <li class="footer__contact">
+          <a href="https://praktikum.yandex.ru" target="_blank" class="footer__link">Яндекс.Практикум</a>
+        </li>
       </ul>
       <ul class="footer__social">
         <li class="footer__social-icon">
-          <a href="#">
+          <a href="https://github.com/Elistratovnik" target="_blank">
             <img src="<%=require('./images/git.png').default%>" alt="GitHub">
           </a>
         </li>
         <li class="footer__social-icon">
-          <a href="#">
+          <a href="https://www.facebook.com/" target="_blank">
             <img src="<%=require('./images/fb.png').default%>" alt="facebook">
           </a>
         </li>
@@ -159,6 +163,7 @@
       </p>
     </article>
   </template>
-<script src="<%= htmlWebpackPlugin.files.js %>"></script>
+  <script src="<%= htmlWebpackPlugin.files.js %>"></script>
 </body>
+
 </html>

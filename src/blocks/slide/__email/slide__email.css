@@ -1,6 +1,7 @@
 .slide__email {
-  font-family: "Roboto";
+  font-family: 'Roboto', Arial, sans-serif;
   font-weight: normal;
   font-size: 14px;
   line-height: 22px;
+  color: #1a1b22;
 }

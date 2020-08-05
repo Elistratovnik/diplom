@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="ru">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -10,98 +11,101 @@
   <link rel="icon" href="<%=require('./images/favicon.ico').default%>" type="image/x-icon">
   <link rel="stylesheet" href="<%=htmlWebpackPlugin.files.css %>">
 </head>
-  <body class="body">
-    <div class="page body__page">
-      <header class="header header_theme_dark">
-        <span class="header__text-logo header__text-logo_theme_dark">NewsAnalyzer</span>
-        <nav class="header__navigation">
-          <ul class="header__list">
-            <li class="header__list-item">
-              <a href="./index.html" class="header__link header__link_theme_dark">
-                Главная
-              </a>
-            </li>
-            <li class="header__list-item">
-              <a href="./about.html" class="header__link header__link_theme_dark">
-                О проекте
-              </a>
-            </li>
-          </ul>
-        </nav>
-      </header>
-      <section class="statistics">
-        <div class="statistics__path">
-          <a href="./index.html" class="statistics__link">Главная</a>
-          <a href="#" class="statistics__link statistics__link_current-path">&sol; Аналитика</a>
+
+<body class="body">
+  <div class="page body__page">
+    <header class="header header_theme_dark">
+      <span class="header__text-logo header__text-logo_theme_dark">NewsAnalyzer</span>
+      <nav class="header__navigation">
+        <ul class="header__list">
+          <li class="header__list-item">
+            <a href="./index.html" class="header__link header__link_theme_dark">
+              Главная
+            </a>
+          </li>
+          <li class="header__list-item">
+            <a href="./about.html" class="header__link header__link_theme_dark">
+              О проекте
+            </a>
+          </li>
+        </ul>
+      </nav>
+    </header>
+    <section class="statistics">
+      <div class="statistics__path">
+        <a href="./index.html" class="statistics__link">Главная</a>
+        <a href="#" class="statistics__link statistics__link_current-path">&sol; Аналитика</a>
+      </div>
+      <h2 class="statistics__title">Вы спросили: «Путешествия»</h2>
+      <p class="statistics__subtitle">Новостей за неделю: <span class="statistics__result">34 324</span></p>
+      <p class="statistics__subtitle">Упоминаний в загаловках: <span class="statistics__result">235</span></p>
+    </section>
+    <section class="diagram">
+      <h2 class="diagram__title">Аналитика по дням</h2>
+      <article class="table">
+        <div class="table__row table__row_heading">
+          <div class="table__cell table__cell_date">Дата <br>(август)</div>
+          <div class="table__cell">Кол-во упоминаний</div>
         </div>
-        <h2 class="statistics__title">Вы спросили: «Путешествия»</h2>
-        <p class="statistics__subtitle">Новостей за неделю: <span class="statistics__result">34 324</span></p>
-        <p class="statistics__subtitle">Упоминаний в загаловках: <span class="statistics__result">235</span></p>
-      </section>
-      <section class="diagram">
-        <h2 class="diagram__title">Аналитика по дням</h2>
-        <article class="table">
-          <div class="table__row table__row_heading">
-            <div class="table__cell table__cell_date">Дата <br>(август)</div>
-            <div class="table__cell">Кол-во упоминаний</div>
+        <div class="table__row table__row_scale">
+          <div class="table__cell table__cell_scale">0</div>
+          <div class="table__cell table__cell_scale">25</div>
+          <div class="table__cell table__cell_scale">50</div>
+          <div class="table__cell table__cell_scale">75</div>
+          <div class="table__cell table__cell_scale">100</div>
+        </div>
+        <div class="table__main-section">
+          <div class="table__column table__column_day">
+            <div class="table__cell table__cell_date">19, пн</div>
+            <div class="table__cell table__cell_date">19, пн</div>
+            <div class="table__cell table__cell_date">19, пн</div>
+            <div class="table__cell table__cell_date">19, пн</div>
+            <div class="table__cell table__cell_date">19, пн</div>
+            <div class="table__cell table__cell_date">19, пн</div>
+            <div class="table__cell table__cell_date">19, пн</div>
           </div>
-          <div class="table__row table__row_scale">
-            <div class="table__cell table__cell_scale">0</div>
-            <div class="table__cell table__cell_scale">25</div>
-            <div class="table__cell table__cell_scale">50</div>
-            <div class="table__cell table__cell_scale">75</div>
-            <div class="table__cell table__cell_scale">100</div>
+          <div class="table__column table__column_result">
+            <div class="table__cell table__cell_result"><span class="table__percent">15</span></div>
+            <div class="table__cell table__cell_result"><span class="table__percent">15</span></div>
+            <div class="table__cell table__cell_result"><span class="table__percent">15</span></div>
+            <div class="table__cell table__cell_result"><span class="table__percent">15</span></div>
+            <div class="table__cell table__cell_result"><span class="table__percent">15</span></div>
+            <div class="table__cell table__cell_result"><span class="table__percent">15</span></div>
+            <div class="table__cell table__cell_result"><span class="table__percent">15</span></div>
           </div>
-          <div class="table__main-section">
-            <div class="table__column table__column_day">
-              <div class="table__cell table__cell_date">19, пн</div>
-              <div class="table__cell table__cell_date">19, пн</div>
-              <div class="table__cell table__cell_date">19, пн</div>
-              <div class="table__cell table__cell_date">19, пн</div>
-              <div class="table__cell table__cell_date">19, пн</div>
-              <div class="table__cell table__cell_date">19, пн</div>
-              <div class="table__cell table__cell_date">19, пн</div>
-            </div>
-            <div class="table__column table__column_result">
-              <div class="table__cell table__cell_result"><span class="table__percent">15</span></div>
-              <div class="table__cell table__cell_result"><span class="table__percent">15</span></div>
-              <div class="table__cell table__cell_result"><span class="table__percent">15</span></div>
-              <div class="table__cell table__cell_result"><span class="table__percent">15</span></div>
-              <div class="table__cell table__cell_result"><span class="table__percent">15</span></div>
-              <div class="table__cell table__cell_result"><span class="table__percent">15</span></div>
-              <div class="table__cell table__cell_result"><span class="table__percent">15</span></div>
-            </div>
-          </div>
-          <div class="table__row table__row_scale">
-            <div class="table__cell table__cell_scale">0</div>
-            <div class="table__cell table__cell_scale">25</div>
-            <div class="table__cell table__cell_scale">50</div>
-            <div class="table__cell table__cell_scale">75</div>
-            <div class="table__cell table__cell_scale">100</div>
-          </div>
-        </article>
-      </section>
-      <footer class="footer">
-        <span class="footer__copyright">&COPY; 2019  Supersite</span>
-        <ul class="footer__contacts">
-          <li class="footer__contact"><a href="./index.html" class="footer__link">Главная</a></li>
-          <li class="footer__contact"><a href="./about.html" class="footer__link">О&nbsp;проекте</a></li>
-          <li class="footer__contact"><a href="https://praktikum.yandex.ru" target="_blank" class="footer__link">Яндекс.Практикум</a></li>
-        </ul>
-        <ul class="footer__social">
-          <li class="footer__social-icon">
-            <a href="#">
-              <img src="<%=require('./images/git.png').default%>" alt="GitHub">
-            </a>
-          </li>
-          <li class="footer__social-icon">
-            <a href="#">
-              <img src="<%=require('./images/fb.png').default%>" alt="facebook">
-            </a>
-          </li>
-        </ul>
-      </footer>
-    </div>
+        </div>
+        <div class="table__row table__row_scale">
+          <div class="table__cell table__cell_scale">0</div>
+          <div class="table__cell table__cell_scale">25</div>
+          <div class="table__cell table__cell_scale">50</div>
+          <div class="table__cell table__cell_scale">75</div>
+          <div class="table__cell table__cell_scale">100</div>
+        </div>
+      </article>
+    </section>
+    <footer class="footer">
+      <span class="footer__copyright">&COPY; 2019 Supersite</span>
+      <ul class="footer__contacts">
+        <li class="footer__contact"><a href="./index.html" class="footer__link">Главная</a></li>
+        <li class="footer__contact"><a href="./about.html" class="footer__link">О&nbsp;проекте</a></li>
+        <li class="footer__contact"><a href="https://praktikum.yandex.ru" target="_blank"
+            class="footer__link">Яндекс.Практикум</a></li>
+      </ul>
+      <ul class="footer__social">
+        <li class="footer__social-icon">
+          <a href="https://github.com/Elistratovnik" target="_blank">
+            <img src="<%=require('./images/git.png').default%>" alt="GitHub">
+          </a>
+        </li>
+        <li class="footer__social-icon">
+          <a href="https://www.facebook.com/" target="_blank">
+            <img src="<%=require('./images/fb.png').default%>" alt="facebook">
+          </a>
+        </li>
+      </ul>
+    </footer>
+  </div>
   <script src="<%= htmlWebpackPlugin.files.js %>"></script>
-  </body>
+</body>
+
 </html>

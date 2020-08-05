@@ -1,11 +1,11 @@
 .diagram__title {
   margin: 0;
   margin-bottom: 48px;
-  font-family: "Roboto Slab";
+  font-family: 'Roboto Slab', Arial, sans-serif;
   font-weight: normal;
   font-size: 26px;
   line-height: 30px;
-  color: #1A1B22;
+  color: #1a1b22;
 }
 
 
