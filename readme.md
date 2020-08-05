@@ -1,3 +1,5 @@
+# https://elistratovnik.github.io/diplom/
+
 # diploma work
 ## Yandex Praktikum
 Yandex Praktikum
