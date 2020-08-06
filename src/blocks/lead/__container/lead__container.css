@@ -1,0 +1,17 @@
+.lead__container {
+  max-width: 608px;
+  margin: 0 auto;
+}
+
+@media (max-width: 768px) {
+  .lead__container {
+    max-width: 454px;
+  }
+}
+
+
+@media (max-width: 492px) {
+  .lead__container {
+    max-width: 288px;
+  }
+}

@@ -1,0 +1,19 @@
+.about-author__paragraph {
+  margin: 0;
+  margin-bottom: 24px;
+  font-family: 'Roboto', Arial, sans-serif;
+  font-weight: normal;
+  font-size: 18px;
+  line-height: 24px;
+  color: #1a1b22;
+}
+
+.about-author__paragraph:last-child {
+  margin: 0;
+}
+
+@media (max-width: 950px) {
+  .about-author__paragraph {
+    margin-bottom: 0;
+  }
+}

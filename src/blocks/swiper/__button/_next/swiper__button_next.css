@@ -1,0 +1,9 @@
+.swiper__button.swiper__button_next {
+  width: 40px;
+  height: 40px;
+  right: 24px;
+}
+
+.swiper__button.swiper__button_next:after {
+  display: none;
+}

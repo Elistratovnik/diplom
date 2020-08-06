@@ -1,0 +1,18 @@
+.table__row_scale {
+  padding-left: 117px;
+  padding-top: 14px;
+  padding-bottom: 14px;
+  justify-content: space-between;
+  font-family: 'Roboto', Arial, sans-serif;
+  font-weight: normal;
+  font-size: 12px;
+  line-height: 16px;
+  letter-spacing: 0.4px;
+  color: #b6bcbf;
+}
+
+@media (max-width: 400px) {
+  .table__row.table__row_scale {
+    display: none;
+  }
+}

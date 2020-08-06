@@ -1,0 +1,6 @@
+@import url('./_heading/table__row_heading.css');
+@import url('./_scale/table__row_scale.css');
+
+.table__row {
+  display: flex;
+}

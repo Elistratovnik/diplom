@@ -1,0 +1,10 @@
+@import url('./_current-path.css');
+
+.statistics__link {
+  color: #1a1b22;
+  text-decoration: none;
+}
+
+.statistics__link:hover {
+  text-decoration: underline;
+}

@@ -1,0 +1,16 @@
+@import url('./_active/header__list-item_active.css');
+
+.header__list-item {
+  display: flex;
+  align-items: center;
+}
+
+.header__list-item:first-child {
+  margin-right: 34px;
+}
+
+@media (max-width: 680px) {
+  .header__list-item:first-child {
+    margin-right: 12px;
+  }
+}

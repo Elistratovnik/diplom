@@ -1,0 +1,10 @@
+.about-author__description {
+  max-width: 600px;
+  margin-top: 51px;
+}
+
+@media (max-width: 950px) {
+  .about-author__description {
+    margin-top: 0;
+  }
+}

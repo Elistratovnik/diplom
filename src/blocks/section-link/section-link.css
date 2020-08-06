@@ -1,0 +1,30 @@
+.section-link {
+  position: relative;
+  font-family: 'Roboto', Arial, sans-serif;
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 24px;
+  color: #1a1b22;
+  text-decoration: none;
+  padding-right: 26px;
+  transition: 500ms ease;
+}
+
+.section-link:hover {
+  transform: translateX(5px);
+}
+
+.section-link::after {
+  content: '';
+  position: absolute;
+  width: 8px;
+  height: 13px;
+  right: 7px;
+  top: 0;
+  bottom: 0;
+  margin: auto 0;
+  background-image: url('../../images/back.png');
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+}

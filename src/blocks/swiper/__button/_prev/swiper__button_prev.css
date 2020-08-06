@@ -1,0 +1,10 @@
+.swiper__button.swiper__button_prev {
+  width: 40px;
+  height: 40px;
+  transform: rotate(180deg);
+  left: 24px;
+}
+
+.swiper__button.swiper__button_prev:after {
+  display: none;
+}

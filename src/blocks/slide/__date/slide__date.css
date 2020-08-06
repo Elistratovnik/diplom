@@ -1,0 +1,15 @@
+.slide__date {
+  display: block;
+  font-family: 'Roboto', Arial, sans-serif;
+  font-weight: normal;
+  font-size: 14px;
+  line-height: 22px;
+  color: #b6bcbf;
+  margin-bottom: 16px;
+}
+
+@media (max-width: 680px) {
+  .slide__date {
+    margin-bottom: 9px;
+  }
+}

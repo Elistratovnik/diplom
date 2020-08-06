@@ -1,0 +1,25 @@
+@media (max-width: 492px) {
+  .commits__section-link {
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 32px;
+    margin: 0 auto;
+    padding: 16px 0;
+    border: 1px solid black;
+    border-radius: 28px;
+    text-align: center;
+    vertical-align: middle;
+    z-index: 3;
+    width: 240px;
+  }
+  .commits__section-link::after {
+    display: none;
+  }
+}
+
+@media (max-width: 368px) {
+  .commits__section-link {
+    width: calc(100% - 32px);
+  }
+}

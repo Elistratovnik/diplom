@@ -1,0 +1,10 @@
+.news__section-title {
+  margin: 0;
+}
+
+
+@media (max-width: 640px) {
+  .news__section-title {
+    margin-bottom: 16px;
+  }
+}

@@ -1,0 +1,9 @@
+.table__cell_date {
+  width: 117px;
+}
+
+@media (max-width: 400px) {
+  .table__cell_date {
+    width: 80px;
+  }
+}

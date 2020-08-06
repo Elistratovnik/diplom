@@ -1,0 +1,8 @@
+@import url('./__title/not-found__title.css');
+@import url('./__subtitle/not-found__subtitle.css');
+
+.not-found {
+  margin: 0 auto;
+  text-align: center;
+  max-width: 356px;
+}

@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="author" content="Елистратов Никита">
+  <meta name="description" content="Дипломная работа">
+  <title>NewsAnalyzer</title>
+  <link rel="shortcut icon" href="<%=require('./images/favicon.ico').default%>" type="image/x-icon">
+  <link rel="icon" href="<%=require('./images/favicon.ico').default%>" type="image/x-icon">
+  <link rel="stylesheet" href="<%=htmlWebpackPlugin.files.css %>">
+</head>
+
+<body class="body">
+  <div class="page body__page">
+    <section class="lead">
+      <header class="header header_theme_light lead__header">
+        <span class="header__text-logo header__text-logo_theme_light">NewsAnalyzer</span>
+        <nav class="header__navigation">
+          <ul class="header__list">
+            <li class="header__list-item header__list-item_active">
+              <a href="#" class="header__link header__link_theme_light header__link_active">Главная</a>
+            </li>
+            <li class="header__list-item">
+              <a href="./about.html" class="header__link header__link_theme_light">О&nbsp;проекте</a>
+            </li>
+          </ul>
+        </nav>
+      </header>
+      <div class="lead__container">
+        <h1 class="lead__title">Что в мире творится?</h1>
+        <p class="lead__description">
+          Введите в поиске любую тему и узнайте,
+          насколько популярной она была в новостях за
+          прошедшую неделю.
+        </p>
+        <div class="search-field lead__search-field">
+          <input type="text" class="search-field__input" placeholder="Введите тему новости" required>
+          <button class="button search-field__button">Искать</button>
+        </div>
+      </div>
+    </section>
+    <section class="news">
+      <header class="news__header">
+        <h2 class="section-title news__section-title">Результаты поиска</h2>
+        <a href="./analytics.html" class="section-link news__section-link">Посмотреть аналитику</a>
+      </header>
+      <article class="cards">
+        <div class="cards__list">
+          <div class="card">
+            <div class="card__image"></div>
+            <span class="card__date">2 августа, 2019</span>
+            <h3 class="card__title">Национальное достояние – парки</h3>
+            <p class="card__text">
+              В 2016 году Америка отмечала важный юбилей: сто лет назад здесь начала
+              складываться система национальных парков – охраняемых территорий, где и
+              сегодня каждый может приобщиться к природе.
+            </p>
+            <cite class="card__source">источник</cite>
+          </div>
+          <div class="card">
+            <div class="card__image"></div>
+            <span class="card__date">2 августа, 2019</span>
+            <h3 class="card__title">Национальное достояние – парки</h3>
+            <p class="card__text">
+              В 2016 году Америка отмечала важный юбилей: сто лет назад здесь начала
+              складываться система национальных парков – охраняемых территорий, где и
+              сегодня каждый может приобщиться к природе.
+            </p>
+            <cite class="card__source">источник</cite>
+          </div>
+          <div class="card">
+            <div class="card__image"></div>
+            <span class="card__date">2 августа, 2019</span>
+            <h3 class="card__title">Национальное достояние – парки Национальное достояние – парки Национальное достояние – парки</h3>
+            <p class="card__text">
+              В 2016 году Америка отмечала важный юбилей: сто лет назад здесь начала
+              складываться система национальных парков – охраняемых территорий, где и
+              сегодня каждый может приобщиться к природе.
+            </p>
+            <cite class="card__source">источник</cite>
+          </div>
+        </div>
+        <button class="button cards__button">Показать еще</button>
+      </article>
+    </section>
+    <section class="about-author">
+      <div class="about-author__avatar"></div>
+      <div class="about-author__description">
+        <h2 class="section-title about-author__section-title">Об авторе</h2>
+        <p class="about-author__paragraph">
+          Это блок с описанием автора проекта. Здесь следует указать, как вас зовут,
+          чем вы занимаетесь, какими технологиями разработки владеете.
+        </p>
+        <p class="about-author__paragraph">
+          Также можно рассказать о процессе обучения в Практикуме, чему вы тут научились,
+          и чем можете помочь потенциальным заказчикам.
+        </p>
+      </div>
+    </section>
+    <footer class="footer">
+      <span class="footer__copyright">&COPY; 2019 Supersite</span>
+      <ul class="footer__contacts">
+        <li class="footer__contact"><a href="./index.html" class="footer__link">Главная</a></li>
+        <li class="footer__contact"><a href="./about.html" class="footer__link">О&nbsp;проекте</a></li>
+        <li class="footer__contact">
+          <a href="https://praktikum.yandex.ru" target="_blank" class="footer__link">Яндекс.Практикум</a>
+        </li>
+      </ul>
+      <ul class="footer__social">
+        <li class="footer__social-icon">
+          <a href="https://github.com/Elistratovnik" target="_blank">
+            <img src="<%=require('./images/git.png').default%>" alt="GitHub">
+          </a>
+        </li>
+        <li class="footer__social-icon">
+          <a href="https://www.facebook.com/" target="_blank">
+            <img src="<%=require('./images/fb.png').default%>" alt="facebook">
+          </a>
+        </li>
+      </ul>
+    </footer>
+  </div>
+
+  <template>
+    <article class="cards">
+      <div class="cards__list"></div>
+      <button class="button cards__button">Показать еще</button>
+    </article>
+  </template>
+
+  <template>
+    <div class="card">
+      <div class="card__image"></div>
+      <span class="card__date">ДАТА</span>
+      <h3 class="card__title">some title</h3>
+      <p class="card__text">
+        В 2016 году Америка отмечала важный юбилей: сто лет назад здесь начала
+        складываться система национальных парков – охраняемых территорий, где и
+        сегодня каждый может приобщиться к природе.
+      </p>
+      <cite class="card__source">источник</cite>
+    </div>
+  </template>
+
+  <template>
+    <article class="load">
+      <div class="load__spinner"></div>
+      <p class="load__text">Идет поиск новостей...</p>
+    </article>
+  </template>
+
+  <template>
+    <article class="not-found">
+      <img src="<%=require('./images/not-found_v1.png').default%>" alt="">
+      <h2 class="not-found__title">
+        Ничего не найдено
+      </h2>
+      <p class="not-found__subtitle">
+        К сожалению по вашему запросу
+        ничего не найдено.
+      </p>
+    </article>
+  </template>
+  <script src="<%= htmlWebpackPlugin.files.js %>"></script>
+</body>
+
+</html>

@@ -1,0 +1,16 @@
+@import url('./_theme/header__text-logo_theme_dark.css');
+@import url('./_theme/header__text-logo_theme_light.css');
+
+.header__text-logo {
+  font-family: 'Roboto Slab', Arial, sans-serif;
+  font-weight: bold;
+  font-size: 20px;
+  line-height: 24px;
+  align-self: center;
+}
+
+@media (max-width: 680px) {
+  .header__text-logo {
+    font-size: 16px;
+  }
+}

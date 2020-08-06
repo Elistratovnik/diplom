@@ -1,0 +1,14 @@
+.cards__button {
+  display: block;
+  color: black;
+  background-color: white;
+  margin: 0 auto;
+}
+
+.cards__button:hover {
+  background-color: lightgrey;
+}
+
+.cards__button:active {
+  opacity: 0.8;
+}

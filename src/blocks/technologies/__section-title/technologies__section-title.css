@@ -1,0 +1,17 @@
+.technologies__section-title {
+  max-width: 344px;
+  margin: 0;
+  margin-bottom: 40px;
+}
+
+@media (max-width: 850px) {
+  .technologies__section-title {
+    margin-bottom: 27px;
+  }
+}
+
+@media (max-width: 450px) {
+  .technologies__section-title {
+    margin-bottom: 38px;
+  }
+}

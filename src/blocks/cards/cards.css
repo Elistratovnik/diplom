@@ -1,0 +1,6 @@
+@import url('./__list/cards__list.css');
+@import url('./__button/cards__button.css');
+
+.cards {
+  margin: 0 auto;
+}

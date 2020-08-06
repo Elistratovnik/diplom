@@ -1,0 +1,19 @@
+.commits__header {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 64px;
+    align-items: baseline;
+}
+
+@media (max-width: 850px) {
+  .commits__header {
+    margin-bottom: 34px;
+  }
+}
+
+@media (max-width: 450px) {
+  .commits__header {
+    margin-bottom: 16px;
+  }
+}
+

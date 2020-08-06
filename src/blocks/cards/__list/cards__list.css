@@ -1,0 +1,23 @@
+.cards__list {
+  border: 1px;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  grid-gap: 16px;
+  justify-content: center;
+  margin-bottom: 64px;
+}
+
+@media (max-width: 850px) {
+  .cards__list {
+    grid-template-columns: repeat(auto-fill, minmax(224px, 1fr));
+    grid-gap: 8px;
+    margin-bottom: 32px;
+  }
+}
+
+
+@media (max-width: 450px) {
+  .cards__list {
+    margin-bottom: 12px;
+  }
+}

@@ -1,0 +1,21 @@
+@import url('./__date/slide__date.css');
+@import url('./__name/slide__name.css');
+@import url('./__email/slide__email.css');
+@import url('./__text/slide__text.css');
+@import url('./__avatar/slide__avatar.css');
+@import url('./__author/slide__author.css');
+
+
+.slide {
+  padding: 24px;
+  box-sizing: border-box;
+  color: #1a1b22;
+  border-radius: 16px;
+  background-color: white;
+}
+
+@media (max-width: 450px) {
+  .slide {
+    padding: 16px;
+  }
+}

@@ -1,0 +1,28 @@
+@import url('./__header/commits__header.css');
+@import url('./__section-title/commits__section-title.css');
+@import url('./__section-link/commits__section-link.css');
+
+.commits {
+  position: relative;
+  background-color: #f5f6f7;
+  padding: 72px 104px 70px 104px;
+}
+
+@media (max-width: 850px) {
+  .commits {
+    padding: 40px;
+    padding-bottom: 28px;
+  }
+}
+
+@media (max-width: 680px) {
+  .commits {
+    padding: 32px 16px;
+  }
+}
+
+@media (max-width: 492px) {
+  .commits {
+    padding-bottom: 88px;
+  }
+}

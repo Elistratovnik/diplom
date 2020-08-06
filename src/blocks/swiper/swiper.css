@@ -1,0 +1,53 @@
+@import url('./__container/swiper__container.css');
+@import url('./__bullet/swiper-pagination-bullet.css');
+@import url('./__button/swiper__button.css');
+
+.swiper {
+  position: relative;
+  margin: 0 -104px;
+  overflow: hidden;
+}
+
+.swiper::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 50px;
+  height: 100%;
+  background-image: linear-gradient(to right, #f5f6f7, transparent);
+  z-index: 2;
+}
+
+.swiper::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 50px;
+  height: 100%;
+  background-image: linear-gradient(to left, #f5f6f7, transparent);
+  z-index: 2;
+}
+
+@media (max-width: 1000px) {
+  .swiper::before {
+    background-image: none;
+  }
+
+  .swiper::after {
+    background-image: none;
+  }
+}
+
+@media (max-width: 850px) {
+  .swiper {
+    margin: 0 -40px;
+  }
+}
+
+@media (max-width: 680px) {
+  .swiper {
+    margin: 0 -16px 11px -16px;
+  }
+}

@@ -1,0 +1,31 @@
+@import url('../vendor/normalize.css');
+@import url('../blocks/page/page.css');
+@import url('../blocks/header/header.css');
+@import url('../blocks/footer/footer.css');
+@import url('../blocks/statistics/statistics.css');
+@import url('../blocks/diagram/diagram.css');
+@import url('../blocks/section-title/section-title.css');
+@import url('../blocks/table/table.css');
+
+
+@font-face {
+  src: url(../vendor/fonts/roboto-medium.woff) format('woff');
+  font-family: 'Roboto';
+  font-weight: 500;
+}
+
+@font-face {
+  src: url(../vendor/fonts/roboto-regular.woff) format('woff');
+  font-family: 'Roboto';
+  font-weight: 400;
+}
+
+@font-face {
+  src: url(../vendor/fonts/robotoslab-regular.woff) format('woff');
+  font-family: 'Roboto Slab';
+}
+
+@font-face {
+  src: url(../vendor/fonts/sourcesanspro-regular.woff) format('woff');
+  font-family: 'Source Sans Pro';
+}

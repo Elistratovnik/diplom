@@ -1,0 +1,23 @@
+@import url('./__title/statistics__title.css');
+@import url('./__subtitle/statistics__subtitle.css');
+@import url('./__result/statistics__result.css');
+@import url('./__path/statistics__path.css');
+@import url('./__link/statistics__link.css');
+
+.statistics {
+  padding: 40px 100px 80px;
+}
+
+@media (max-width: 850px) {
+  .statistics {
+    padding: 40px;
+    padding-top: 32px;
+  }
+}
+
+@media (max-width: 680px) {
+  .statistics {
+    padding: 16px;
+    padding-bottom: 24px;
+  }
+}

@@ -1,0 +1,9 @@
+.commits__section-title {
+  margin: 0;
+}
+
+@media (max-width: 850px) {
+  .commits__section-title {
+    max-width: 336px;
+  }
+}

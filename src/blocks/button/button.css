@@ -1,0 +1,36 @@
+.button {
+  height: 64px;
+  font-family: 'Roboto', Arial, sans-serif;
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 24px;
+  padding-left: 54px;
+  padding-right: 54px;
+  border-radius: 32px;
+  border: none;
+  cursor: pointer;
+}
+
+.button:focus {
+  outline: none;
+}
+
+@media (max-width: 768px) {
+  .button {
+    height: 56px;
+    padding-left: 50px;
+    padding-right: 49px;
+    border-radius: 28px;
+  }
+}
+
+@media (max-width: 368px) {
+  .button {
+    width: 100%;
+  }
+}
+
+
+
+
+

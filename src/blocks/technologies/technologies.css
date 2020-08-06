@@ -1,0 +1,28 @@
+@import url('./__caption/technologies__caption.css');
+@import url('./__image/technologies__image.css');
+@import url('./__item/technologies__item.css');
+@import url('./__items-container/technologies__items-container.css');
+@import url('./__section-title/technologies__section-title.css');
+
+.technologies {
+  background-color: #f5f6f7;
+  padding: 83px 104px 91px 104px;
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+@media (max-width: 850px) {
+  .technologies {
+    padding: 40px;
+    padding-bottom: 41px;
+  }
+}
+
+@media (max-width: 680px) {
+  .technologies {
+    padding: 32px 16px 39px 16px;
+    flex-direction: column;
+  }
+}
+

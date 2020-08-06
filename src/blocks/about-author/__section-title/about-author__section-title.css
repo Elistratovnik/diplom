@@ -1,0 +1,17 @@
+.about-author__section-title {
+  margin: 0;
+  margin-bottom: 24px;
+}
+
+@media (max-width: 850px) {
+  .about-author__section-title {
+    margin-bottom: 12px;
+  }
+}
+
+@media (max-width: 450px) {
+  .about-author__section-title {
+    margin-bottom: 18px;
+  }
+}
+
