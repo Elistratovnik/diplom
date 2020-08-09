@@ -45,8 +45,10 @@ function searchNews () {
   searchForm.reset();
   newsList.resetList();
   const nowDate = formatDate(new Date());
-  const weekAgoDate = formatDate(new Date(new Date().getTime() - 604800000));
-  const url = createNewsUrl(searchInput.getValue(), weekAgoDate, nowDate);
+  const endDate = new Date();
+  endDate.setDate(endDate.getDate() - 6);
+  console.log(nowDate, formatDate(endDate));
+  const url = createNewsUrl(searchInput.getValue(), formatDate(endDate), nowDate);
   newsApi.setUrl(url);
   section.style.display = 'block';
   spinner.style.display = 'flex';
