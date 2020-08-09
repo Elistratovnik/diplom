@@ -15,6 +15,7 @@
   overflow: hidden;
   padding: 24px;
   padding-top: 0;
+  text-decoration: none;
 }
 
 @media (max-width: 768px) {

@@ -1,6 +1,7 @@
 .search-field__button {
   color: white;
   background-color: #2f71e5;
+  z-index: 1;
 }
 
 .search-field__button:hover {

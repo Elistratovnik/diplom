@@ -1,0 +1,8 @@
+.search-field .search-field__input_invalid:focus {
+  box-shadow: inset 0 0 4px #db395b;
+}
+
+.search-field__input_invalid {
+  box-shadow: inset 0 0 4px #db395b;
+}
+

@@ -1,15 +1,18 @@
 @import url('./__input/search-field__input.css');
 @import url('./__button/search-field__button.css');
+@import url('./__error/search-field__error.css');
 
 .search-field {
+  position: relative;
   display: flex;
-  height: 64px;
+  flex-wrap: wrap;
+  min-height: 64px;
   border-radius: 32px;
 }
 
 @media (max-width: 768px) {
   .search-field {
-    height: 56px;
+    min-height: 56px;
   }
 }
 
