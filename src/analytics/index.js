@@ -7,8 +7,9 @@ import Statistics from "../js/components/Statistics";
 
 const data = new DataStorage();
 const statisticsTable = document.querySelector('.table');
-const statistics = new Statistics(statisticsTable, formatAnalyticsDate, formatDate, data.getNews);
+const statisticsContainer = document.querySelector('.statistics');
+const statistics = new Statistics(statisticsContainer, statisticsTable, formatAnalyticsDate, formatDate, data.getNews, data.getSearchRequest);
 
 statistics.setTableDates();
 statistics.setTableResults();
-
+statistics.setGeneralStatistics();

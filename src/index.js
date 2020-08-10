@@ -63,8 +63,8 @@ function searchNews () {
       return res;
     })
     .then((res) => {
-      console.log(res)
       storage.setNews(res);
+      storage.setSearchRequest(searchInput.getValue());
       sectionHeader.style.display = 'flex';
       sectionCards.style.display = 'block';
       newsList.trippleCard(res.articles);
