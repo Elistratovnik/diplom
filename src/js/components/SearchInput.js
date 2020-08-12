@@ -10,8 +10,13 @@ export default class SearchInput {
     this._setEventListeners();
   }
 
-  _setValue () {
+  _updateValue () {
     this.value = this.input.value;
+  }
+
+  setInputText (text) {
+    this.input.value = text;
+    this._updateValue();
   }
 
   getValue () {
@@ -19,14 +24,14 @@ export default class SearchInput {
   }
 
   _setEventListeners () {
-    this.input.addEventListener('input', () => {this._setValue()});
+    this.input.addEventListener('input', () => {this._updateValue()});
     this.input.addEventListener('input', () => {this.validate()});
   }
 
   validate () {
     this._checkInputValidity();
     this._errorMessage();
-    this._setSubmitButtonState();
+    this.setSubmitButtonState();
     return this.isValid;
   }
 
@@ -57,13 +62,17 @@ export default class SearchInput {
     }
   }
 
-  _setSubmitButtonState () {
+  setSubmitButtonState () {
     if (this.isValid) {
       this.button.classList.remove('button_disabled');
       this.button.removeAttribute('disabled');
     } else {
-      this.button.classList.add('button_disabled');
-      this.button.setAttribute('disabled', '')
+      this.buttonDisable();
     }
+  }
+
+  buttonDisable () {
+    this.button.classList.add('button_disabled');
+    this.button.setAttribute('disabled', '')
   }
 }

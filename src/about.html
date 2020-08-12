@@ -103,59 +103,13 @@
       </div>
     </section>
     <section class="commits">
-      <header class="commits__header">
+      <header class="commits__header" data-display="flex">
         <h2 class="section-title commits__section-title">История коммитов из&nbsp;GitHub</h2>
         <a href="https://github.com/Elistratovnik" class="section-link commits__section-link" target="_blank">Открыть в Github</a>
       </header>
-      <article class="swiper">
+      <article class="swiper" data-display="block">
         <div class="swiper-container swiper__container">
           <div class="swiper-wrapper">
-            <div class="swiper-slide slide">
-              <span class="slide__date">14 августа, 2019</span>
-              <div class="slide__author">
-                <div class="slide__avatar"></div>
-                <div class="slide__info">
-                  <h3 class="slide__name">Антон Долинин</h3>
-                  <span class="slide__email">anton@yandex.ru</span>
-                </div>
-              </div>
-              <p class="slide__text">
-                Emmet (formerly Zen Coding) is a web-
-                developer’s toolkit that can greatly improve your HTML & CSS workflow.
-                Emmet (formerly Zen Coding) is a web-
-                developer’s toolkit that can greatly improve your HTML & CSS workflow.
-                Emmet (formerly Zen Coding) is a web-
-                developer’s toolkit that can greatly improve your HTML & CSS workflow.
-              </p>
-            </div>
-            <div class="swiper-slide slide swiper__slide">
-              <span class="slide__date">14 августа, 2019</span>
-              <div class="slide__author">
-                <div class="slide__avatar"></div>
-                <div class="slide__info">
-                  <h3 class="slide__name">Антон Долинин</h3>
-                  <span class="slide__email">anton@yandex.ru</span>
-                </div>
-              </div>
-              <p class="slide__text">
-                Emmet (formerly Zen Coding) is a web-
-                developer’s toolkit that can greatly improve your HTML & CSS workflow.
-              </p>
-            </div>
-            <div class="swiper-slide slide swiper__slide">
-              <span class="slide__date">14 августа, 2019</span>
-              <div class="slide__author">
-                <div class="slide__avatar"></div>
-                <div class="slide__info">
-                  <h3 class="slide__name">Антон Долинин</h3>
-                  <span class="slide__email">anton@yandex.ru</span>
-                </div>
-              </div>
-              <p class="slide__text">
-                Emmet (formerly Zen Coding) is a web-
-                developer’s toolkit that can greatly improve your HTML & CSS workflow.
-              </p>
-            </div>
           </div>
           <div class="swiper-pagination"></div>
         </div>
@@ -185,6 +139,28 @@
       </ul>
     </footer>
   </div>
+
+  <template id="slide">
+    <div href="#" class="swiper-slide slide swiper__slide">
+      <span class="slide__date"></span>
+      <div class="slide__author">
+        <div class="slide__avatar"></div>
+        <div class="slide__info">
+          <h3 class="slide__name"></h3>
+          <span class="slide__email"></span>
+        </div>
+      </div>
+      <p class="slide__text"></p>
+    </div>
+  </template>
+
+  <template id="load" data-selector=".load">
+    <article class="load">
+      <div class="load__spinner"></div>
+      <p class="load__text">Идет загрузка коммитов</p>
+    </article>
+  </template>
+
   <script src="<%= htmlWebpackPlugin.files.js %>"></script>
 </body>
 

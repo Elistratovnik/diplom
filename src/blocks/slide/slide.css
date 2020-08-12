@@ -12,6 +12,7 @@
   color: #1a1b22;
   border-radius: 16px;
   background-color: white;
+  text-decoration: none;
 }
 
 @media (max-width: 450px) {

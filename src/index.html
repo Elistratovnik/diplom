@@ -43,25 +43,11 @@
       </div>
     </section>
     <section class="news">
-      <header class="news__header">
+      <header class="news__header" data-display="flex">
         <h2 class="section-title news__section-title">Результаты поиска</h2>
         <a href="./analytics.html" class="section-link news__section-link">Посмотреть аналитику</a>
       </header>
-      <article class="load">
-        <div class="load__spinner"></div>
-        <p class="load__text">Идет поиск новостей...</p>
-      </article>
-      <article class="not-found">
-        <img src="<%=require('./images/not-found_v1.png').default%>" alt="">
-        <h2 class="not-found__title">
-          Ничего не найдено
-        </h2>
-        <p class="not-found__subtitle">
-          К сожалению по вашему запросу
-          ничего не найдено.
-        </p>
-      </article>
-      <article class="cards">
+      <article class="cards" data-display="block">
         <div class="cards__list"></div>
         <button class="button cards__button">Показать еще</button>
       </article>
@@ -116,6 +102,26 @@
       </p>
       <cite class="card__source">источник</cite>
     </a>
+  </template>
+
+  <template id="not-found" data-selector=".not-found">
+    <article class="not-found">
+      <img src="<%=require('./images/not-found_v1.png').default%>" alt="">
+      <h2 class="not-found__title">
+        Ничего не найдено
+      </h2>
+      <p class="not-found__subtitle">
+        К сожалению по вашему запросу
+        ничего не найдено.
+      </p>
+    </article>
+  </template>
+
+  <template id="load" data-selector=".load">
+    <article class="load">
+      <div class="load__spinner"></div>
+      <p class="load__text">Идет поиск новостей...</p>
+    </article>
   </template>
 
   <script src="<%= htmlWebpackPlugin.files.js %>"></script>

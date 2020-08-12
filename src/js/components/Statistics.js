@@ -29,7 +29,7 @@ export default class Statistics {
       return acc;
     }, {});
     for (let i in countDates) {
-      countDates[i] = countDates[i] * 100 / result.length;
+      countDates[i] = Math.round(countDates[i] * 100 / result.length);
     }
     Array.from(this.resultCells).forEach((elem) => {
       elem.querySelector('.table__percent').textContent = countDates[elem.dataset.date] || 0;

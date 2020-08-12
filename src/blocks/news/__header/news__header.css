@@ -1,5 +1,5 @@
 .news__header {
-  display: none;
+  display: flex;
   justify-content: space-between;
   margin-bottom: 64px;
   align-items: baseline;
