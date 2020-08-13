@@ -11,6 +11,7 @@
 @import url('../blocks/swiper/swiper.css');
 @import url('../blocks/slide/slide.css');
 @import url('../blocks/load/load.css');
+@import url('../blocks/error/error.css');
 
 
 @font-face {

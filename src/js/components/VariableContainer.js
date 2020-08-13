@@ -28,10 +28,13 @@ export default class VariableContainer {
     if (this.element) this.element.remove();
   }
 
-  renderElement (template) {
+  renderElement (template, errorMessage) {
     this._removeElement();
     this.hideСhilds();
     this.element = template.content.cloneNode(true).querySelector(template.dataset.selector);
+    if (errorMessage) {
+      this.element.querySelector('.error__number').textContent = errorMessage.match(/\d{3}/);
+    }
     this.container.append(this.element);
   }
 }

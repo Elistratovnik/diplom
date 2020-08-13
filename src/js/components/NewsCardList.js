@@ -23,11 +23,11 @@ export default class NewsCardList {
         break;
       };
       this.addCard({title: array[i].title,
-               date: array[i].publishedAt,
-               source: array[i].source.name,
-               description: array[i].description,
-               sourceLink: array[i].url,
-               imgLink: array[i].urlToImage})
+                    date: array[i].publishedAt,
+                    source: array[i].source.name,
+                    description: array[i].description,
+                    sourceLink: array[i].url,
+                    imgLink: array[i].urlToImage})
       if (array.length == 3) this.buttonDisabled(true);
     }
     this.count = this.count + 3;

@@ -1,0 +1,23 @@
+@import url('./__number/error__number.css');
+@import url('./__text/error__text.css');
+
+@keyframes error-blink {
+  0% { border-color: rgba(255, 0, 0, 0.1);}
+  100% { border-color: #db395b;}
+}
+.error {
+  display: flex;
+  align-items: center;
+  margin: 0 auto;
+  max-width: 500px;
+  border-left: 4px solid #db395b;
+  padding: 24px;
+  background: linear-gradient(to right, white 8px, rgba(255, 0, 0, 0.1) 8px, #f5f6f7);
+  animation: error-blink 1.5s ease-in-out infinite alternate;
+}
+
+@media (max-width: 487px) {
+  .error {
+    display: block;
+  }
+}

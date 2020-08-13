@@ -4,6 +4,7 @@
 @import url('./__text/slide__text.css');
 @import url('./__avatar/slide__avatar.css');
 @import url('./__author/slide__author.css');
+@import url('./__info/slide__info.css');
 
 
 .slide {

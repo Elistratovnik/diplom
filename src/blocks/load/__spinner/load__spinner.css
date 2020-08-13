@@ -9,5 +9,5 @@
   background-image: url('../../../images/Ellipse.png');
   border-radius: 50%;
   border-image-slice: 1;
-  animation: spinner-circle 0.8s ease-in-out infinite;
+  animation: spinner-circle 0.8s ease-in-out infinite ;
 }

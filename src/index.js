@@ -8,27 +8,24 @@ import NewsCardList from "./js/components/NewsCardList";
 import DataStorage from "./js/modules/DataStorage";
 import formatCardDate from "./js/utils/formatCardDate";
 import VariableContainer from "./js/components/VariableContainer";
+import createXDateAgo from "./js/utils/createXDateAgo";
+import INPUT_ERROR_MESSAGES from "./js/constants/INPUT_ERROR_MESSAGES";
+import SearchInputValidator from "./js/components/SearchInputValidator";
 
-const errorMessages = {
-  valueMissing: 'Нужно ввести ключевое слово',
-  tooShort: 'Должно быть от 2 до 30 символов',
-  typeMismatch: 'Здесь должна быть ссылка'
-}
-
-const searchForm = document.forms.search;
-const searchButton = searchForm.button;
+const searchForm = document.querySelector('.search-field');
+const searchInputField = searchForm.querySelector('.search-field__input');
+const searchButton = searchForm.querySelector('.search-field__button');
+const searchError = searchForm.querySelector('.search-field__error');
 const newsApi = new NewsApi();
-
-const searchInput = new SearchInput(searchForm.input,
-                                    searchButton,
-                                    errorMessages,
-                                    document.querySelector('.search-field__error'));
-
-const newsSection = document.querySelector('.news');
 const storage = new DataStorage();
 
+const searchInput = new SearchInput(searchInputField, searchButton);
+const searchInputValidator = new SearchInputValidator(searchInputField, searchButton, INPUT_ERROR_MESSAGES, searchError);
+
+const newsSection = document.querySelector('.news');
 const notFound = document.querySelector('#not-found');
 const spinner = document.querySelector('#load');
+const errorField = document.querySelector('#error');
 const newsVariableContainer = new VariableContainer(newsSection);
 
 const cardTemplate = document.querySelector('#card').content;
@@ -44,15 +41,14 @@ const newsList = new NewsCardList(cardsList,
 
 function searchNews () {
   event.preventDefault();
-  if (!searchInput.validate()) return console.log('Поле не валидно');
-  searchInput.buttonDisable();
+  if (!searchInputValidator.validate()) return console.log('Поле не валидно');
+  searchInputValidator.buttonDisable();
   newsList.resetList();
   newsVariableContainer.showContainer();
   newsVariableContainer.renderElement(spinner);
   const nowDate = formatDate(new Date());
-  const endDate = new Date();
-  endDate.setDate(endDate.getDate() - 6);
-  const url = createNewsUrl(searchInput.getValue(), formatDate(endDate), nowDate);
+  const endDate = formatDate(createXDateAgo(6));
+  const url = createNewsUrl(searchInput.getValue(), endDate, nowDate);
   newsApi.setUrl(url);
   newsApi.getNews()
     .then((res) => {
@@ -62,15 +58,15 @@ function searchNews () {
       storage.setSearchRequest(searchInput.getValue());
       newsList.trippleCard(res.articles);
     })
-    .catch((res) => {
-      if(res === 'not-found') {
+    .catch((err) => {
+      if(err === 'not-found') {
         newsVariableContainer.renderElement(notFound);
       } else {
-        console.log(res);
+        newsVariableContainer.renderElement(errorField, err);
       }
     })
     .finally(() => {
-      searchInput.setSubmitButtonState();
+      searchInputValidator.setSubmitButtonState();
     })
 }
 

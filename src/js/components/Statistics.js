@@ -24,12 +24,22 @@ export default class Statistics {
 
   setTableResults () {
     const result = this.getNewsData().articles;
-    const countDates = result.reduce((acc, el) => {
-      acc[el.publishedAt.match(/\d{4}-\d{1,2}-\d{1,2}/)] = (acc[el.publishedAt.match(/\d{4}-\d{1,2}-\d{1,2}/)] || 0) + 1;
+    const request = this.getRequestData();
+    const dateRegExp = new RegExp('\\d{4}\-\\d{1,2}\-\\d{1,2}');
+    const requestRegExp = new RegExp(request, 'gi');
+    const countDates = result.reduce((acc, data) => {
+      do {
+        if (requestRegExp.test(data.title + data.description)) {
+          acc[data.publishedAt.match(dateRegExp)] = (acc[data.publishedAt.match(dateRegExp)] || 0) + 1;
+          acc.total = (acc.total || 0) + 1;
+        }
+      } while (requestRegExp.lastIndex !== 0)
       return acc;
     }, {});
-    for (let i in countDates) {
-      countDates[i] = Math.round(countDates[i] * 100 / result.length);
+    for (let date in countDates) {
+      if (date !== 'total') {
+        countDates[date] = Math.round(countDates[date] * 100 / countDates.total)
+      };
     }
     Array.from(this.resultCells).forEach((elem) => {
       elem.querySelector('.table__percent').textContent = countDates[elem.dataset.date] || 0;
@@ -43,10 +53,17 @@ export default class Statistics {
     this.headersResult = this.statisticsContainer.querySelector('.statistics__result_headers');
     this.title.textContent = `Вы спросили: «${this.getRequestData()}»`
     this.newsPerWeek.textContent = this.getNewsData().totalResults;
-    const regexp = new RegExp(`${this.getRequestData()}`, 'g')
-    this.headersResult.textContent = this.getNewsData().articles.reduce((acc, item) => {
-      if (regexp.test(item.title)) {return acc + 1};
+    const requestRegExp = new RegExp(this.getRequestData(), 'gi')
+    this.headersResult.textContent = this.getNewsData().articles.reduce((acc, data) => {
+      do {
+        if (requestRegExp.test(data.title)) {
+          acc = acc + 1;
+        };
+      } while (requestRegExp.lastIndex !== 0)
       return acc;
     }, 0);
   }
+
 }
+
+
