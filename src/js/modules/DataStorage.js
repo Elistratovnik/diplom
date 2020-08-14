@@ -2,27 +2,27 @@ import formatDate from "../utils/formatDate";
 
 export default class DataStorage {
   setNews (arr) {
-    sessionStorage.setItem('news', JSON.stringify(arr));
+    localStorage.setItem('news', JSON.stringify(arr));
     this._setVisitDate();
   }
 
   setSearchRequest (request) {
-    sessionStorage.setItem('request', JSON.stringify(request));
+    localStorage.setItem('request', JSON.stringify(request));
   }
 
   getNews () {
-    return JSON.parse(sessionStorage.getItem('news'));
+    return JSON.parse(localStorage.getItem('news'));
   }
 
   getSearchRequest () {
-    return JSON.parse(sessionStorage.getItem('request'));
+    return JSON.parse(localStorage.getItem('request'));
   }
 
   _setVisitDate() {
-    sessionStorage.setItem('visitDate', JSON.stringify(formatDate(new Date())));
+    localStorage.setItem('visitDate', JSON.stringify(formatDate(new Date())));
   }
 
   getVisitDate () {
-    return JSON.parse(sessionStorage.getItem('visitDate'));
+    return JSON.parse(localStorage.getItem('visitDate'));
   }
 }

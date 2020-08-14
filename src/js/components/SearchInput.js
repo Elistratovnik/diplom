@@ -1,25 +1,22 @@
-export default class SearchInput {
-  constructor(input, button) {
+import BaseComponent from "./BaseComponent";
+
+export default class SearchInput extends BaseComponent {
+  constructor({handlers, input}) {
+    super(handlers);
     this.input = input;
-    this.button = button;
     this.value = '';
-    this._setEventListeners();
   }
 
-  _updateValue () {
+  updateValue = () => {
     this.value = this.input.value;
   }
 
   setInputText (text) {
     this.input.value = text;
-    this._updateValue();
+    this.updateValue();
   }
 
   getValue () {
     return this.value;
-  }
-
-  _setEventListeners () {
-    this.input.addEventListener('input', () => {this._updateValue()});
   }
 }

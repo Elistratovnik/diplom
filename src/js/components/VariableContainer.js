@@ -33,7 +33,7 @@ export default class VariableContainer {
     this.hideСhilds();
     this.element = template.content.cloneNode(true).querySelector(template.dataset.selector);
     if (errorMessage) {
-      this.element.querySelector('.error__number').textContent = errorMessage.match(/\d{3}/);
+      this.element.querySelector('.error__number').textContent = errorMessage;
     }
     this.container.append(this.element);
   }

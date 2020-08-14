@@ -9,6 +9,7 @@ import VariableContainer from '../js/components/VariableContainer';
 import GITHUB_API_URL from '../js/constants/GITHUB_API_URL';
 import SLIDER_OBJECT_OPTIONS from '../js/constants/SLIDER_OBJECT_OPTIONS';
 
+(function() {
 Swiper.use([Navigation, Pagination]);
 const gitApi = new GithubApi(GITHUB_API_URL);
 
@@ -32,4 +33,4 @@ gitApi.getData()
   .catch((err) => {
     commitsVariableContainer.renderElement(errorField, err);
   })
-
+})();

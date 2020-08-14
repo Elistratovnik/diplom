@@ -1,13 +1,15 @@
-export default class SearchInputValidator {
-  constructor(input, button, errorMessages, errorElement) {
+import BaseComponent from "./BaseComponent";
+
+export default class SearchInputValidator extends BaseComponent {
+  constructor({handlers, input, button, errorMessages, errorElement}) {
+    super(handlers)
     this.input = input;
     this.button = button;
     this.errorElement = errorElement;
     this.errorMessages = errorMessages;
-    this._setEventListeners();
   }
 
-  validate () {
+  validate = () => {
     this._checkInputValidity();
     this._errorMessage();
     this.setSubmitButtonState();
@@ -20,12 +22,16 @@ export default class SearchInputValidator {
       this.error = this.errorMessages.valueMissing;
       return false;
     }
-    // if (this.input.validity.tooShort || this.input.validity.tooLong) {
-    //   return { isValid: false, error: this.errorMessages.tooShort };
-    // }
-    // if (this.input.validity.typeMismatch) {
-    //   return { isValid: false, error: this.errorMessages.typeMismatch };
-    // }
+    if (this.input.validity.tooShort || this.input.validity.tooLong) {
+      this.isValid = false;
+      this.error = this.errorMessages.tooShort;
+      return false;
+    }
+    if (this.input.validity.patternMismatch) {
+      this.isValid = false;
+      this.error = this.errorMessages.patternMismatch;
+      return false;
+    }
     this.isValid = true;
     this.error = '';
   }
@@ -54,9 +60,4 @@ export default class SearchInputValidator {
     this.button.classList.add('button_disabled');
     this.button.setAttribute('disabled', '')
   }
-
-  _setEventListeners () {
-    this.input.addEventListener('input', () => {this.validate()});
-  }
-
 }

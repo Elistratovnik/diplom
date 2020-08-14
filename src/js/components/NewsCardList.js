@@ -1,13 +1,14 @@
-export default class NewsCardList {
-  constructor(container, createCardItem, cardTemplate, button, getNews, formatCardDate) {
+import BaseComponent from "./BaseComponent";
+
+export default class NewsCardList extends BaseComponent {
+  constructor({handlers, container, createCardItem, cardTemplate, button, formatCardDate}) {
+    super(handlers);
     this.formatCardDate = formatCardDate;
     this.container = container;
     this.cardTemplate = cardTemplate;
     this.createCardItem = createCardItem;
     this.button = button;
-    this.getNews = getNews;
     this.count = 0;
-    this.setEventListeners();
   }
 
   addCard({title, date, source, description, sourceLink, imgLink}) {
@@ -36,10 +37,6 @@ export default class NewsCardList {
   resetList = () => {
     this.count = 0;
     this.container.querySelectorAll('.card').forEach((item) => item.remove());
-  }
-
-  setEventListeners () {
-    this.button.addEventListener('click', () => {this.trippleCard (this.getNews().articles)})
   }
 
   buttonDisabled (flag) {

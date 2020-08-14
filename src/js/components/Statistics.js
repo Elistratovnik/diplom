@@ -23,24 +23,12 @@ export default class Statistics {
   }
 
   setTableResults () {
-    const result = this.getNewsData().articles;
+    const newsData = this.getNewsData().articles;
     const request = this.getRequestData();
     const dateRegExp = new RegExp('\\d{4}\-\\d{1,2}\-\\d{1,2}');
     const requestRegExp = new RegExp(request, 'gi');
-    const countDates = result.reduce((acc, data) => {
-      do {
-        if (requestRegExp.test(data.title + data.description)) {
-          acc[data.publishedAt.match(dateRegExp)] = (acc[data.publishedAt.match(dateRegExp)] || 0) + 1;
-          acc.total = (acc.total || 0) + 1;
-        }
-      } while (requestRegExp.lastIndex !== 0)
-      return acc;
-    }, {});
-    for (let date in countDates) {
-      if (date !== 'total') {
-        countDates[date] = Math.round(countDates[date] * 100 / countDates.total)
-      };
-    }
+    let countDates = this._countingRepetitions(newsData, requestRegExp, dateRegExp);
+    countDates = this._conversionToInterest(countDates);
     Array.from(this.resultCells).forEach((elem) => {
       elem.querySelector('.table__percent').textContent = countDates[elem.dataset.date] || 0;
       elem.style.width = countDates[elem.dataset.date] + '%';
@@ -54,7 +42,11 @@ export default class Statistics {
     this.title.textContent = `Вы спросили: «${this.getRequestData()}»`
     this.newsPerWeek.textContent = this.getNewsData().totalResults;
     const requestRegExp = new RegExp(this.getRequestData(), 'gi')
-    this.headersResult.textContent = this.getNewsData().articles.reduce((acc, data) => {
+    this.headersResult.textContent = this._countingHeadersResult(this.getNewsData().articles, requestRegExp);
+  }
+
+  _countingHeadersResult (dataArray = [], requestRegExp) {
+    return dataArray.reduce((acc, data) => {
       do {
         if (requestRegExp.test(data.title)) {
           acc = acc + 1;
@@ -64,6 +56,26 @@ export default class Statistics {
     }, 0);
   }
 
+  _countingRepetitions (dataArray = [], requestRegExp, dateRegExp) {
+    return dataArray.reduce((acc, data) => {
+      do {
+        if (requestRegExp.test(data.title + data.description)) {
+          acc[data.publishedAt.match(dateRegExp)] = (acc[data.publishedAt.match(dateRegExp)] || 0) + 1;
+          acc.total = (acc.total || 0) + 1;
+        }
+      } while (requestRegExp.lastIndex !== 0)
+      return acc;
+    }, {});
+  }
+
+  _conversionToInterest (dateObject = {}) {
+    for (let date in dateObject) {
+      if (date !== 'total') {
+        dateObject[date] = Math.round(dateObject[date] * 100 / dateObject.total)
+      };
+    }
+    return dateObject;
+  }
 }
 
 

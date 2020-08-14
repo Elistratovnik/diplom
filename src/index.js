@@ -12,15 +12,24 @@ import createXDateAgo from "./js/utils/createXDateAgo";
 import INPUT_ERROR_MESSAGES from "./js/constants/INPUT_ERROR_MESSAGES";
 import SearchInputValidator from "./js/components/SearchInputValidator";
 
-const searchForm = document.querySelector('.search-field');
-const searchInputField = searchForm.querySelector('.search-field__input');
-const searchButton = searchForm.querySelector('.search-field__button');
-const searchError = searchForm.querySelector('.search-field__error');
+(function () {
 const newsApi = new NewsApi();
 const storage = new DataStorage();
 
-const searchInput = new SearchInput(searchInputField, searchButton);
-const searchInputValidator = new SearchInputValidator(searchInputField, searchButton, INPUT_ERROR_MESSAGES, searchError);
+const searchForm = document.querySelector('.search-field');
+const searchInputField = searchForm.querySelector('.search-field__input');
+const searchInput = new SearchInput({handlers: [{element: searchForm, event: 'submit'},
+                                                {element: searchInputField, event: 'input'}],
+                                     input: searchInputField});
+
+const searchButton = searchForm.querySelector('.search-field__button');
+const searchError = searchForm.querySelector('.search-field__error');
+const searchInputValidator = new SearchInputValidator({
+  input: searchInputField,
+  button: searchButton,
+  errorMessages: INPUT_ERROR_MESSAGES,
+  errorElement: searchError,
+  handlers: [{element: searchInputField, event: 'input'}]});
 
 const newsSection = document.querySelector('.news');
 const notFound = document.querySelector('#not-found');
@@ -32,12 +41,15 @@ const cardTemplate = document.querySelector('#card').content;
 const createCardItem = (...arg) => new NewsCard(...arg);
 const cardsList = document.querySelector('.cards__list');
 const cardsButton = document.querySelector('.cards__button');
-const newsList = new NewsCardList(cardsList,
-                                  createCardItem,
-                                  cardTemplate,
-                                  cardsButton,
-                                  storage.getNews,
-                                  formatCardDate);
+const newsList = new NewsCardList({container: cardsList,
+                                   createCardItem: createCardItem,
+                                   cardTemplate: cardTemplate,
+                                   button: cardsButton,
+                                   formatCardDate: formatCardDate,
+                                   handlers: [{
+                                     element: cardsButton,
+                                     event: 'click'
+                                   }]});
 
 function searchNews () {
   event.preventDefault();
@@ -70,17 +82,22 @@ function searchNews () {
     })
 }
 
+function renderThreeCards () {
+    newsList.trippleCard(storage.getNews().articles);
+}
+
 function renderNews () {
   if (storage.getVisitDate() === formatDate(new Date())) {
     newsVariableContainer.showContainer();
     searchInput.setInputText(storage.getSearchRequest());
-    newsList.trippleCard(storage.getNews().articles);
+    renderThreeCards();
   }
 }
 
-
 newsVariableContainer.hideContainer();
+newsList.setHandlers([renderThreeCards]);
+searchInput.setHandlers([searchNews, searchInput.updateValue]);
+searchInputValidator.setHandlers([searchInputValidator.validate])
 renderNews();
-searchForm.addEventListener('submit', searchNews);
-
+})();
 

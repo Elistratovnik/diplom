@@ -1,5 +1,5 @@
 export default function createNewsUrl (value, startDate, endDate) {
-  let url = 'http://newsapi.org/v2/everything?' +
+  let url = 'https://nomoreparties.co/news/v2/everything?' +
   `q=${value}&` +
   `from=${startDate}&` +
   `to=${endDate}&` +
