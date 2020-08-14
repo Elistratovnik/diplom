@@ -22,11 +22,6 @@ export default class SearchInputValidator extends BaseComponent {
       this.error = this.errorMessages.valueMissing;
       return false;
     }
-    if (this.input.validity.tooShort || this.input.validity.tooLong) {
-      this.isValid = false;
-      this.error = this.errorMessages.tooShort;
-      return false;
-    }
     if (this.input.validity.patternMismatch) {
       this.isValid = false;
       this.error = this.errorMessages.patternMismatch;

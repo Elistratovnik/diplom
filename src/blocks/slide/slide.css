@@ -16,6 +16,10 @@
   text-decoration: none;
 }
 
+.slide:hover {
+  box-shadow: 2px 3px 4px rgba(0, 0, 0, 0.3);
+}
+
 @media (max-width: 450px) {
   .slide {
     padding: 16px;
