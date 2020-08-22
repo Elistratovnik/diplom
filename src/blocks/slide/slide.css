@@ -4,6 +4,7 @@
 @import url('./__text/slide__text.css');
 @import url('./__avatar/slide__avatar.css');
 @import url('./__author/slide__author.css');
+@import url('./__info/slide__info.css');
 
 
 .slide {
@@ -12,6 +13,11 @@
   color: #1a1b22;
   border-radius: 16px;
   background-color: white;
+  text-decoration: none;
+}
+
+.slide:hover {
+  box-shadow: 2px 3px 4px rgba(0, 0, 0, 0.3);
 }
 
 @media (max-width: 450px) {

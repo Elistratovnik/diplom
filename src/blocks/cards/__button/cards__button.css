@@ -6,7 +6,7 @@
 }
 
 .cards__button:hover {
-  background-color: lightgrey;
+  background-color: rgba(0, 0, 0, 0.1);
 }
 
 .cards__button:active {

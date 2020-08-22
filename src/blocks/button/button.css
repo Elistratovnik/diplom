@@ -1,3 +1,5 @@
+@import url('./_disabled/button_disabled.css');
+
 .button {
   height: 64px;
   font-family: 'Roboto', Arial, sans-serif;

@@ -6,6 +6,7 @@
 
 
 .card {
+  position: relative;
   background-color: white;
   display: flex;
   flex-direction: column;
@@ -15,6 +16,11 @@
   overflow: hidden;
   padding: 24px;
   padding-top: 0;
+  text-decoration: none;
+}
+
+.card:hover {
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
 }
 
 @media (max-width: 768px) {
@@ -31,3 +37,4 @@
     padding-bottom: 20px;
   }
 }
+

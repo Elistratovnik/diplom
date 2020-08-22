@@ -5,8 +5,8 @@
 Yandex Praktikum
 student: Elistratov Nikita
 
-version: 0.0.1
-review : 0
+version: 0.0.2
+review : 1
 
 commands to use on the command line:
 cloning a repository : git clone https://github.com/Elistratovnik/diplom.git
