@@ -3,7 +3,7 @@ export default class CommitSlide {
     this.formatDate = formatDate;
     this.template = template;
     this.name = name;
-    this.avatarLink = avatarLink || '../../../images/no_photo.png';
+    this.avatarLink = avatarLink;
     this.date = date;
     this.description = description;
     this.email = email;

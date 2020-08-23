@@ -7,7 +7,7 @@ export default class NewsCard {
     this.source = source;
     this.description = description;
     this.sourceLink = sourceLink;
-    this.imgLink = imgLink || '../../../images/no_photo.png';
+    this.imgLink = imgLink;
   }
 
   createCard () {
@@ -15,7 +15,7 @@ export default class NewsCard {
     this.card.setAttribute('href', `${this.sourceLink}`)
     this.cardImage = this.card.querySelector('.card__image');
     this.cardImage.setAttribute('data-link', `${this.imgLink}`);
-    this.cardImage.style.backgroundImage = `url('${this.imgLink}')`;
+    if (this.imgLink) this.cardImage.style.backgroundImage = `url('${this.imgLink}')`;
     this.cardTitle = this.card.querySelector('.card__title');
     this.cardTitle.setAttribute('data-title', `${this.title}`);
     this.cardTitle.textContent = this.title;
